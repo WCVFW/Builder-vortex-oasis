@@ -18,9 +18,9 @@ import { CommonModule } from "@angular/common";
           <div class="sm:col-span-2 lg:col-span-2">
             <div class="flex items-center mb-4 lg:mb-6">
               <div
-                class="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-xl"
+                class="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-pink-500 to-pink-400 rounded-xl shadow-lg"
               >
-                <span class="text-white text-lg sm:text-xl">♥</span>
+                <span class="text-white text-lg sm:text-xl">💖</span>
               </div>
               <span
                 class="ml-2 sm:ml-3 text-lg sm:text-xl lg:text-2xl font-bold text-white"
@@ -39,28 +39,28 @@ import { CommonModule } from "@angular/common";
             <div class="flex space-x-4 lg:space-x-6">
               <a
                 href="#"
-                class="text-gray-400 hover:text-purple-400 transition-colors duration-200 transform hover:scale-110"
+                class="text-gray-400 hover:text-pink-400 transition-colors duration-200 transform hover:scale-110"
                 aria-label="Facebook"
               >
                 <span class="text-xl sm:text-2xl">📘</span>
               </a>
               <a
                 href="#"
-                class="text-gray-400 hover:text-purple-400 transition-colors duration-200 transform hover:scale-110"
+                class="text-gray-400 hover:text-pink-400 transition-colors duration-200 transform hover:scale-110"
                 aria-label="Twitter"
               >
                 <span class="text-xl sm:text-2xl">🐦</span>
               </a>
               <a
                 href="#"
-                class="text-gray-400 hover:text-purple-400 transition-colors duration-200 transform hover:scale-110"
+                class="text-gray-400 hover:text-pink-400 transition-colors duration-200 transform hover:scale-110"
                 aria-label="Instagram"
               >
                 <span class="text-xl sm:text-2xl">📷</span>
               </a>
               <a
                 href="#"
-                class="text-gray-400 hover:text-purple-400 transition-colors duration-200 transform hover:scale-110"
+                class="text-gray-400 hover:text-pink-400 transition-colors duration-200 transform hover:scale-110"
                 aria-label="LinkedIn"
               >
                 <span class="text-xl sm:text-2xl">💼</span>
@@ -79,7 +79,7 @@ import { CommonModule } from "@angular/common";
               <li>
                 <a
                   routerLink="/about"
-                  class="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200 flex items-center group"
+                  class="text-sm sm:text-base text-gray-300 hover:text-pink-400 transition-colors duration-200 flex items-center group"
                 >
                   <span
                     class="mr-2 group-hover:mr-3 transition-all duration-200"
@@ -91,7 +91,7 @@ import { CommonModule } from "@angular/common";
               <li>
                 <a
                   routerLink="/programs"
-                  class="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200 flex items-center group"
+                  class="text-sm sm:text-base text-gray-300 hover:text-pink-400 transition-colors duration-200 flex items-center group"
                 >
                   <span
                     class="mr-2 group-hover:mr-3 transition-all duration-200"
@@ -103,7 +103,7 @@ import { CommonModule } from "@angular/common";
               <li>
                 <a
                   routerLink="/impact"
-                  class="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200 flex items-center group"
+                  class="text-sm sm:text-base text-gray-300 hover:text-pink-400 transition-colors duration-200 flex items-center group"
                 >
                   <span
                     class="mr-2 group-hover:mr-3 transition-all duration-200"
@@ -115,11 +115,11 @@ import { CommonModule } from "@angular/common";
               <li>
                 <a
                   routerLink="/donate"
-                  class="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200 flex items-center group"
+                  class="text-sm sm:text-base text-gray-300 hover:text-pink-400 transition-colors duration-200 flex items-center group"
                 >
                   <span
                     class="mr-2 group-hover:mr-3 transition-all duration-200"
-                    >♥</span
+                    >💖</span
                   >
                   Donate
                 </a>
@@ -127,7 +127,7 @@ import { CommonModule } from "@angular/common";
               <li>
                 <a
                   routerLink="/contact"
-                  class="text-sm sm:text-base text-gray-300 hover:text-purple-400 transition-colors duration-200 flex items-center group"
+                  class="text-sm sm:text-base text-gray-300 hover:text-pink-400 transition-colors duration-200 flex items-center group"
                 >
                   <span
                     class="mr-2 group-hover:mr-3 transition-all duration-200"
@@ -149,7 +149,7 @@ import { CommonModule } from "@angular/common";
             <div class="space-y-3 lg:space-y-4">
               <div class="flex items-start group">
                 <span
-                  class="text-purple-400 mr-2 sm:mr-3 mt-1 group-hover:scale-110 transition-transform duration-200"
+                  class="text-pink-400 mr-2 sm:mr-3 mt-1 group-hover:scale-110 transition-transform duration-200"
                   >📧</span
                 >
                 <div>
@@ -163,7 +163,7 @@ import { CommonModule } from "@angular/common";
               </div>
               <div class="flex items-start group">
                 <span
-                  class="text-purple-400 mr-2 sm:mr-3 mt-1 group-hover:scale-110 transition-transform duration-200"
+                  class="text-pink-400 mr-2 sm:mr-3 mt-1 group-hover:scale-110 transition-transform duration-200"
                   >📞</span
                 >
                 <div>
@@ -177,7 +177,7 @@ import { CommonModule } from "@angular/common";
               </div>
               <div class="flex items-start group">
                 <span
-                  class="text-purple-400 mr-2 sm:mr-3 mt-1 group-hover:scale-110 transition-transform duration-200"
+                  class="text-pink-400 mr-2 sm:mr-3 mt-1 group-hover:scale-110 transition-transform duration-200"
                   >📍</span
                 >
                 <div>
@@ -211,10 +211,10 @@ import { CommonModule } from "@angular/common";
               <input
                 type="email"
                 placeholder="Enter your email"
-                class="flex-1 px-4 py-2 sm:py-3 text-sm sm:text-base text-gray-900 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                class="flex-1 px-4 py-2 sm:py-3 text-sm sm:text-base text-gray-900 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
               />
               <button
-                class="px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-purple-600 to-cyan-500 rounded-lg hover:from-purple-700 hover:to-cyan-600 transform hover:scale-105 transition-all duration-200"
+                class="px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-pink-500 to-pink-400 rounded-lg hover:from-pink-600 hover:to-pink-500 transform hover:scale-105 transition-all duration-200 shadow-lg"
               >
                 Subscribe
               </button>
@@ -235,21 +235,21 @@ import { CommonModule } from "@angular/common";
             <div
               class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4"
             >
-              <div class="flex items-center text-xs sm:text-sm text-purple-400">
+              <div class="flex items-center text-xs sm:text-sm text-pink-400">
                 <span>Made with</span>
-                <span class="mx-1 text-red-500 animate-pulse">♥</span>
+                <span class="mx-1 text-pink-500 animate-pulse">💖</span>
                 <span>for women everywhere</span>
               </div>
               <div class="flex space-x-4 text-xs sm:text-sm">
                 <a
                   href="#"
-                  class="text-gray-400 hover:text-purple-400 transition-colors duration-200"
+                  class="text-gray-400 hover:text-pink-400 transition-colors duration-200"
                 >
                   Privacy Policy
                 </a>
                 <a
                   href="#"
-                  class="text-gray-400 hover:text-purple-400 transition-colors duration-200"
+                  class="text-gray-400 hover:text-pink-400 transition-colors duration-200"
                 >
                   Terms of Service
                 </a>

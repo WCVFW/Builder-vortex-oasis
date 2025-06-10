@@ -9,7 +9,7 @@ import { CommonModule } from "@angular/common";
   template: `
     <!-- Hero Section -->
     <section
-      class="py-12 sm:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-white to-cyan-50"
+      class="py-12 sm:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-50 via-white to-rose-50"
     >
       <div class="max-w-7xl mx-auto">
         <div
@@ -22,7 +22,7 @@ import { CommonModule } from "@angular/common";
             >
               Empowering
               <span
-                class="block sm:inline bg-gradient-to-r from-purple-600 via-cyan-500 to-green-500 bg-clip-text text-transparent"
+                class="block sm:inline bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 bg-clip-text text-transparent"
                 >Women</span
               >
               <span class="block sm:inline">to Change the World</span>
@@ -39,14 +39,14 @@ import { CommonModule } from "@angular/common";
             >
               <a
                 routerLink="/donate"
-                class="inline-flex items-center justify-center px-6 lg:px-8 py-3 lg:py-4 text-base lg:text-lg font-semibold text-white bg-gradient-to-r from-purple-600 to-cyan-500 rounded-lg hover:from-purple-700 hover:to-cyan-600 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                class="inline-flex items-center justify-center px-6 lg:px-8 py-3 lg:py-4 text-base lg:text-lg font-semibold text-white bg-gradient-to-r from-pink-500 to-pink-400 rounded-lg hover:from-pink-600 hover:to-pink-500 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl animate-pink-glow"
               >
-                <span class="mr-2">♥</span>
+                <span class="mr-2">💖</span>
                 Make a Donation
               </a>
               <a
                 routerLink="/programs"
-                class="inline-flex items-center justify-center px-6 lg:px-8 py-3 lg:py-4 text-base lg:text-lg font-semibold text-gray-700 bg-white border-2 border-gray-300 rounded-lg hover:bg-gray-50 hover:border-purple-300 transition-all duration-200"
+                class="inline-flex items-center justify-center px-6 lg:px-8 py-3 lg:py-4 text-base lg:text-lg font-semibold text-gray-700 bg-white border-2 border-pink-300 rounded-lg hover:bg-pink-50 hover:border-pink-400 transition-all duration-200"
               >
                 Learn More
                 <span class="ml-2">→</span>
@@ -57,7 +57,7 @@ import { CommonModule } from "@angular/common";
           <!-- Hero Image -->
           <div class="order-1 lg:order-2 relative">
             <div
-              class="relative z-10 bg-white rounded-2xl shadow-2xl p-4 sm:p-6 lg:p-8 transform hover:scale-105 transition-transform duration-300"
+              class="relative z-10 bg-white rounded-2xl shadow-2xl p-4 sm:p-6 lg:p-8 transform hover:scale-105 transition-transform duration-300 border border-pink-100"
             >
               <img
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
@@ -67,10 +67,10 @@ import { CommonModule } from "@angular/common";
             </div>
             <!-- Floating decorative elements -->
             <div
-              class="absolute -top-4 -left-4 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full opacity-20 animate-pulse"
+              class="absolute -top-4 -left-4 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-pink-400 to-rose-400 rounded-full opacity-20 animate-pulse"
             ></div>
             <div
-              class="absolute -bottom-4 -right-4 w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-gradient-to-r from-cyan-500 to-green-500 rounded-full opacity-20 animate-pulse"
+              class="absolute -bottom-4 -right-4 w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-gradient-to-r from-rose-400 to-pink-300 rounded-full opacity-20 animate-pulse"
               style="animation-delay: 1s"
             ></div>
           </div>
@@ -88,7 +88,7 @@ import { CommonModule } from "@angular/common";
             [style.animation-delay]="i * 0.1 + 's'"
           >
             <div
-              class="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 lg:mb-6 shadow-lg"
+              class="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 lg:mb-6 shadow-lg shadow-pink-200"
             >
               <span
                 class="text-white text-lg sm:text-xl lg:text-2xl xl:text-3xl"
@@ -111,7 +111,7 @@ import { CommonModule } from "@angular/common";
     </section>
 
     <!-- Programs Preview -->
-    <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-pink-50">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-10 sm:mb-12 lg:mb-16">
           <h2
@@ -119,7 +119,7 @@ import { CommonModule } from "@angular/common";
           >
             Our
             <span
-              class="bg-gradient-to-r from-purple-600 via-cyan-500 to-green-500 bg-clip-text text-transparent"
+              class="bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 bg-clip-text text-transparent"
               >Programs</span
             >
           </h2>
@@ -136,11 +136,11 @@ import { CommonModule } from "@angular/common";
         >
           <div
             *ngFor="let program of programs; let i = index"
-            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 p-6 lg:p-8"
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 p-6 lg:p-8 border border-pink-100"
             [style.animation-delay]="i * 0.1 + 's'"
           >
             <div
-              class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-xl flex items-center justify-center mb-4 lg:mb-6 shadow-lg"
+              class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-pink-500 to-pink-400 rounded-xl flex items-center justify-center mb-4 lg:mb-6 shadow-lg shadow-pink-200"
             >
               <span class="text-white text-lg sm:text-xl lg:text-2xl">{{
                 program.icon
@@ -158,7 +158,7 @@ import { CommonModule } from "@angular/common";
             </p>
             <a
               routerLink="/programs"
-              class="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 transition-colors duration-150 text-sm sm:text-base"
+              class="inline-flex items-center text-pink-600 font-semibold hover:text-pink-700 transition-colors duration-150 text-sm sm:text-base"
             >
               Learn More
               <span class="ml-1">→</span>
@@ -177,7 +177,7 @@ import { CommonModule } from "@angular/common";
           >
             Stories of
             <span
-              class="bg-gradient-to-r from-purple-600 via-cyan-500 to-green-500 bg-clip-text text-transparent"
+              class="bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 bg-clip-text text-transparent"
               >Impact</span
             >
           </h2>
@@ -194,15 +194,15 @@ import { CommonModule } from "@angular/common";
         >
           <div
             *ngFor="let testimonial of testimonials; let i = index"
-            class="bg-white rounded-xl shadow-md p-6 lg:p-8 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+            class="bg-white rounded-xl shadow-md p-6 lg:p-8 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 border border-pink-100"
             [style.animation-delay]="i * 0.1 + 's'"
           >
             <div class="flex items-center mb-4 lg:mb-6">
-              <div class="flex text-yellow-400 mb-2">
+              <div class="flex text-pink-400 mb-2">
                 <span
                   *ngFor="let star of [1, 2, 3, 4, 5]"
                   class="text-lg sm:text-xl"
-                  >⭐</span
+                  >💖</span
                 >
               </div>
             </div>
@@ -215,13 +215,13 @@ import { CommonModule } from "@angular/common";
               <img
                 [src]="testimonial.image"
                 [alt]="testimonial.name"
-                class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mr-3 sm:mr-4"
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mr-3 sm:mr-4 border-2 border-pink-200"
               />
               <div>
                 <h4 class="text-sm sm:text-base font-semibold text-gray-900">
                   {{ testimonial.name }}
                 </h4>
-                <p class="text-xs sm:text-sm text-purple-600 font-medium">
+                <p class="text-xs sm:text-sm text-pink-600 font-medium">
                   {{ testimonial.role }}
                 </p>
               </div>
@@ -233,7 +233,7 @@ import { CommonModule } from "@angular/common";
 
     <!-- Call to Action -->
     <section
-      class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-cyan-500 text-white"
+      class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-pink-500 to-pink-400 text-white"
     >
       <div class="max-w-4xl mx-auto text-center">
         <h2
@@ -252,14 +252,14 @@ import { CommonModule } from "@angular/common";
         >
           <a
             routerLink="/donate"
-            class="inline-flex items-center justify-center px-6 lg:px-8 py-3 lg:py-4 text-base lg:text-lg font-semibold bg-white text-purple-600 rounded-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-200 shadow-lg"
+            class="inline-flex items-center justify-center px-6 lg:px-8 py-3 lg:py-4 text-base lg:text-lg font-semibold bg-white text-pink-600 rounded-lg hover:bg-pink-50 transform hover:scale-105 transition-all duration-200 shadow-lg"
           >
-            <span class="mr-2">♥</span>
+            <span class="mr-2">💖</span>
             Donate Now
           </a>
           <a
             routerLink="/contact"
-            class="inline-flex items-center justify-center px-6 lg:px-8 py-3 lg:py-4 text-base lg:text-lg font-semibold border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-200"
+            class="inline-flex items-center justify-center px-6 lg:px-8 py-3 lg:py-4 text-base lg:text-lg font-semibold border-2 border-white text-white rounded-lg hover:bg-white hover:text-pink-600 transition-all duration-200"
           >
             Get Involved
             <span class="ml-2">→</span>
