@@ -14,18 +14,33 @@ import { CommonModule } from "@angular/common";
         <div class="flex items-center justify-between h-16 lg:h-20">
           <!-- Logo -->
           <a routerLink="/" class="flex items-center flex-shrink-0">
-            <div
-              class="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-pink-500 to-pink-400 rounded-xl shadow-lg"
-            >
-              <span class="text-white text-lg sm:text-xl">♥</span>
+            <!-- Logo Image -->
+            <div class="flex items-center">
+              <img
+                src="https://images.unsplash.com/photo-1594736797933-d0d2110d2d73?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80"
+                alt="Women's Foundation Logo"
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-pink-300 shadow-lg"
+              />
+              <!-- Backup gradient icon (hidden when image loads) -->
+              <div
+                class="hidden w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-pink-500 to-pink-400 rounded-xl shadow-lg flex items-center justify-center"
+              >
+                <span class="text-white text-lg sm:text-xl">💖</span>
+              </div>
             </div>
-            <span
-              class="ml-2 sm:ml-3 text-lg sm:text-xl lg:text-2xl font-bold text-pink-600 hidden sm:block"
-              >Women's Foundation</span
-            >
-            <span class="ml-2 text-sm font-bold text-pink-600 sm:hidden"
-              >WF</span
-            >
+
+            <!-- Company Name -->
+            <div class="ml-3 sm:ml-4">
+              <span
+                class="text-lg sm:text-xl lg:text-2xl font-bold text-pink-600 hidden sm:block"
+                >Women's Foundation</span
+              >
+              <span class="text-sm font-bold text-pink-600 sm:hidden">WF</span>
+              <!-- Tagline -->
+              <p class="text-xs text-pink-500 hidden lg:block font-medium">
+                Empowering Women Worldwide
+              </p>
+            </div>
           </a>
 
           <!-- Desktop Navigation -->
