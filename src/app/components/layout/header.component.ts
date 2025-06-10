@@ -16,21 +16,30 @@ import { CommonModule } from "@angular/common";
           <a routerLink="/" class="flex items-center flex-shrink-0">
             <!-- Logo Image -->
             <div class="flex items-center">
-              <!-- Primary Logo (SVG) -->
+              <!-- Primary Logo (JPG) -->
               <img
-                src="assets/images/logo.svg"
+                src="assets/images/logo.jpg"
                 alt="Women's Foundation Logo"
                 class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover shadow-lg transition-transform duration-200 hover:scale-110"
                 (error)="onLogoError($event)"
               />
 
-              <!-- Fallback Logo (PNG) - Hidden by default -->
+              <!-- Fallback Logo (SVG) - Hidden by default -->
               <img
-                #fallbackLogo
+                #fallbackSvg
+                src="assets/images/logo.svg"
+                alt="Women's Foundation Logo"
+                class="hidden w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover shadow-lg transition-transform duration-200 hover:scale-110"
+                (error)="onSvgFallbackError($event)"
+              />
+
+              <!-- Second Fallback Logo (PNG) - Hidden by default -->
+              <img
+                #fallbackPng
                 src="assets/images/logo.png"
                 alt="Women's Foundation Logo"
                 class="hidden w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-pink-300 shadow-lg transition-transform duration-200 hover:scale-110"
-                (error)="onFallbackError($event)"
+                (error)="onPngFallbackError($event)"
               />
 
               <!-- Final Fallback - Gradient Icon -->
@@ -238,18 +247,30 @@ export class HeaderComponent {
     this.isMobileMenuOpen = false;
   }
 
-  // Error handling for logo images
+  // Enhanced error handling for logo images with multiple fallbacks
   onLogoError(event: any) {
-    // Hide the primary logo and show the fallback
+    console.log("Primary logo (JPG) failed to load, trying SVG fallback");
+    // Hide the primary logo and show the SVG fallback
     event.target.style.display = "none";
-    const fallbackLogo = event.target.nextElementSibling;
-    if (fallbackLogo) {
-      fallbackLogo.classList.remove("hidden");
+    const fallbackSvg = event.target.nextElementSibling;
+    if (fallbackSvg) {
+      fallbackSvg.classList.remove("hidden");
     }
   }
 
-  onFallbackError(event: any) {
-    // Hide the fallback logo and show the gradient icon
+  onSvgFallbackError(event: any) {
+    console.log("SVG fallback failed to load, trying PNG fallback");
+    // Hide the SVG fallback and show the PNG fallback
+    event.target.style.display = "none";
+    const fallbackPng = event.target.nextElementSibling;
+    if (fallbackPng) {
+      fallbackPng.classList.remove("hidden");
+    }
+  }
+
+  onPngFallbackError(event: any) {
+    console.log("PNG fallback failed to load, showing gradient fallback");
+    // Hide the PNG fallback and show the gradient icon
     event.target.style.display = "none";
     const gradientFallback = event.target.nextElementSibling;
     if (gradientFallback) {
