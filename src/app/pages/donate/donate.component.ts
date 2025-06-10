@@ -10,7 +10,7 @@ import { CommonModule } from "@angular/common";
   template: `
     <!-- Hero Section -->
     <section
-      class="py-12 sm:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-white to-cyan-50"
+      class="py-12 sm:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-50 via-white to-rose-50"
     >
       <div class="max-w-4xl mx-auto text-center">
         <h1
@@ -18,7 +18,7 @@ import { CommonModule } from "@angular/common";
         >
           Make a
           <span
-            class="bg-gradient-to-r from-purple-600 via-cyan-500 to-green-500 bg-clip-text text-transparent"
+            class="bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 bg-clip-text text-transparent"
             >Difference</span
           >
         </h1>
@@ -41,7 +41,7 @@ import { CommonModule } from "@angular/common";
           >
             Your
             <span
-              class="bg-gradient-to-r from-purple-600 via-cyan-500 to-green-500 bg-clip-text text-transparent"
+              class="bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 bg-clip-text text-transparent"
               >Impact</span
             >
           </h2>
@@ -58,13 +58,13 @@ import { CommonModule } from "@angular/common";
         >
           <div
             *ngFor="let impact of impactLevels; let i = index"
-            class="bg-white rounded-xl shadow-md p-4 sm:p-6 lg:p-8 text-center hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300"
+            class="bg-white rounded-xl shadow-md p-4 sm:p-6 lg:p-8 text-center hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-pink-100"
             [style.animation-delay]="i * 0.1 + 's'"
           >
             <div
-              class="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 lg:mb-6 shadow-lg"
+              class="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 lg:mb-6 shadow-lg shadow-pink-200 animate-pink-glow"
             >
-              <span class="text-white text-lg sm:text-xl lg:text-2xl">💰</span>
+              <span class="text-white text-lg sm:text-xl lg:text-2xl">💖</span>
             </div>
             <h3
               class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-2 sm:mb-3"
@@ -82,10 +82,10 @@ import { CommonModule } from "@angular/common";
     </section>
 
     <!-- Donation Form -->
-    <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-pink-50">
       <div class="max-w-4xl mx-auto">
         <div
-          class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 lg:p-12 border border-gray-100"
+          class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 lg:p-12 border border-pink-100"
         >
           <div class="text-center mb-8 sm:mb-10 lg:mb-12">
             <h2
@@ -117,8 +117,8 @@ import { CommonModule } from "@angular/common";
                   <div
                     [class]="
                       donationType === 'one-time'
-                        ? 'border-purple-500 bg-purple-50 text-purple-700'
-                        : 'border-gray-300 text-gray-700 hover:border-gray-400'
+                        ? 'border-pink-500 bg-pink-50 text-pink-700'
+                        : 'border-gray-300 text-gray-700 hover:border-pink-300'
                     "
                     class="border-2 rounded-xl p-4 sm:p-6 text-center transition-all duration-200"
                   >
@@ -141,13 +141,13 @@ import { CommonModule } from "@angular/common";
                   <div
                     [class]="
                       donationType === 'monthly'
-                        ? 'border-purple-500 bg-purple-50 text-purple-700'
-                        : 'border-gray-300 text-gray-700 hover:border-gray-400'
+                        ? 'border-pink-500 bg-pink-50 text-pink-700'
+                        : 'border-gray-300 text-gray-700 hover:border-pink-300'
                     "
                     class="border-2 rounded-xl p-4 sm:p-6 text-center transition-all duration-200"
                   >
                     <span class="text-2xl sm:text-3xl mb-2 sm:mb-3 block"
-                      >♥</span
+                      >💖</span
                     >
                     <span class="text-sm sm:text-base lg:text-lg font-semibold"
                       >Monthly</span
@@ -180,8 +180,8 @@ import { CommonModule } from "@angular/common";
                   <div
                     [class]="
                       selectedAmount === amount
-                        ? 'border-purple-500 bg-purple-50 text-purple-700'
-                        : 'border-gray-300 text-gray-700 hover:border-gray-400'
+                        ? 'border-pink-500 bg-pink-50 text-pink-700'
+                        : 'border-gray-300 text-gray-700 hover:border-pink-300'
                     "
                     class="border-2 rounded-lg p-3 sm:p-4 text-center transition-all duration-200"
                   >
@@ -209,7 +209,7 @@ import { CommonModule } from "@angular/common";
                     name="customAmount"
                     (input)="onCustomAmountChange()"
                     placeholder="Enter amount"
-                    class="w-full pl-8 sm:pl-10 pr-3 sm:pr-4 py-3 sm:py-4 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200"
+                    class="w-full pl-8 sm:pl-10 pr-3 sm:pr-4 py-3 sm:py-4 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-colors duration-200"
                   />
                 </div>
               </div>
@@ -235,7 +235,7 @@ import { CommonModule } from "@angular/common";
                     [(ngModel)]="donorInfo.firstName"
                     name="firstName"
                     required
-                    class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200"
+                    class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-colors duration-200"
                   />
                 </div>
                 <div>
@@ -250,7 +250,7 @@ import { CommonModule } from "@angular/common";
                     [(ngModel)]="donorInfo.lastName"
                     name="lastName"
                     required
-                    class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200"
+                    class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-colors duration-200"
                   />
                 </div>
               </div>
@@ -266,7 +266,7 @@ import { CommonModule } from "@angular/common";
                   [(ngModel)]="donorInfo.email"
                   name="email"
                   required
-                  class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200"
+                  class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-colors duration-200"
                 />
               </div>
             </div>
@@ -295,9 +295,9 @@ import { CommonModule } from "@angular/common";
             <!-- Donate Button -->
             <button
               type="submit"
-              class="w-full flex items-center justify-center px-6 sm:px-8 py-4 sm:py-5 text-base sm:text-lg lg:text-xl font-bold text-white bg-gradient-to-r from-purple-600 to-cyan-500 rounded-xl hover:from-purple-700 hover:to-cyan-600 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+              class="w-full flex items-center justify-center px-6 sm:px-8 py-4 sm:py-5 text-base sm:text-lg lg:text-xl font-bold text-white bg-gradient-to-r from-pink-500 to-pink-400 rounded-xl hover:from-pink-600 hover:to-pink-500 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl animate-pink-glow"
             >
-              <span class="mr-2 sm:mr-3">♥</span>
+              <span class="mr-2 sm:mr-3">💖</span>
               Donate {{ getDonationAmount() | currency }}
               {{ donationType === "monthly" ? "/month" : "" }}
             </button>
@@ -315,7 +315,7 @@ import { CommonModule } from "@angular/common";
           >
             Why
             <span
-              class="bg-gradient-to-r from-purple-600 via-cyan-500 to-green-500 bg-clip-text text-transparent"
+              class="bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 bg-clip-text text-transparent"
               >Donate</span
             >?
           </h2>
@@ -334,7 +334,7 @@ import { CommonModule } from "@angular/common";
             [style.animation-delay]="i * 0.1 + 's'"
           >
             <div
-              class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 lg:mb-8 shadow-lg"
+              class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 lg:mb-8 shadow-lg shadow-pink-200"
             >
               <span class="text-white text-2xl sm:text-3xl lg:text-4xl">{{
                 reason.icon
@@ -355,76 +355,18 @@ import { CommonModule } from "@angular/common";
       </div>
     </section>
 
-    <!-- Other Ways to Help -->
-    <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-10 sm:mb-12 lg:mb-16">
-          <h2
-            class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 lg:mb-6"
-          >
-            Other Ways to
-            <span
-              class="bg-gradient-to-r from-purple-600 via-cyan-500 to-green-500 bg-clip-text text-transparent"
-              >Help</span
-            >
-          </h2>
-          <p
-            class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto"
-          >
-            Can't donate right now? There are other meaningful ways to support
-            our mission.
-          </p>
-        </div>
-
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
-        >
-          <div
-            *ngFor="let way of otherWays; let i = index"
-            class="bg-white rounded-xl shadow-md p-6 sm:p-8 text-center hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300"
-            [style.animation-delay]="i * 0.1 + 's'"
-          >
-            <div
-              class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 sm:mb-6"
-            >
-              <span class="text-white text-lg sm:text-xl lg:text-2xl">{{
-                way.icon
-              }}</span>
-            </div>
-            <h3
-              class="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 mb-3 sm:mb-4"
-            >
-              {{ way.title }}
-            </h3>
-            <p
-              class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed"
-            >
-              {{ way.description }}
-            </p>
-            <a
-              [routerLink]="way.link"
-              class="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 transition-colors duration-150 text-sm sm:text-base"
-            >
-              {{ way.linkText }}
-              <span class="ml-1">→</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Thank You Message -->
     <div
       *ngIf="showThankYou"
       class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
     >
       <div
-        class="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 max-w-sm sm:max-w-md lg:max-w-lg w-full text-center transform scale-95 animate-pulse"
+        class="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 max-w-sm sm:max-w-md lg:max-w-lg w-full text-center transform scale-95 animate-bounce border border-pink-200"
       >
         <div
-          class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6"
+          class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg shadow-pink-200 animate-pink-glow"
         >
-          <span class="text-white text-2xl sm:text-3xl lg:text-4xl">♥</span>
+          <span class="text-white text-2xl sm:text-3xl lg:text-4xl">💖</span>
         </div>
         <h3
           class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6"
@@ -439,7 +381,7 @@ import { CommonModule } from "@angular/common";
         </p>
         <button
           (click)="showThankYou = false"
-          class="px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold text-white bg-gradient-to-r from-purple-600 to-cyan-500 rounded-xl hover:from-purple-700 hover:to-cyan-600 transform hover:scale-105 transition-all duration-200"
+          class="px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold text-white bg-gradient-to-r from-pink-500 to-pink-400 rounded-xl hover:from-pink-600 hover:to-pink-500 transform hover:scale-105 transition-all duration-200 shadow-lg"
         >
           Continue
         </button>
@@ -499,33 +441,6 @@ export class DonateComponent {
       title: "Trusted Organization",
       description:
         "Recognized by leading organizations and awarded for our commitment to transparency and effectiveness.",
-    },
-  ];
-
-  otherWays = [
-    {
-      icon: "🤝",
-      title: "Volunteer",
-      description:
-        "Share your skills and time to directly support our programs and participants.",
-      link: "/contact",
-      linkText: "Learn More",
-    },
-    {
-      icon: "🏢",
-      title: "Corporate Partnership",
-      description:
-        "Partner with us to create employee engagement programs and CSR initiatives.",
-      link: "/contact",
-      linkText: "Partner with Us",
-    },
-    {
-      icon: "📢",
-      title: "Spread the Word",
-      description:
-        "Share our mission on social media and help us reach more supporters.",
-      link: "/",
-      linkText: "Share Now",
     },
   ];
 

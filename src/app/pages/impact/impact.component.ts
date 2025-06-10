@@ -8,14 +8,14 @@ import { RouterLink } from "@angular/router";
   template: `
     <!-- Hero Section -->
     <section
-      class="py-16 px-8 bg-gradient-to-br from-purple-50 via-white to-cyan-50"
+      class="py-16 px-8 bg-gradient-to-br from-pink-50 via-white to-rose-50"
     >
       <div class="max-w-6xl mx-auto">
         <div class="text-center max-w-4xl mx-auto">
           <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Our
             <span
-              class="bg-gradient-to-r from-purple-600 via-cyan-500 to-green-500 bg-clip-text text-transparent"
+              class="bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 bg-clip-text text-transparent"
               >Impact</span
             >
           </h1>
@@ -35,7 +35,7 @@ import { RouterLink } from "@angular/router";
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Impact by the
             <span
-              class="bg-gradient-to-r from-purple-600 via-cyan-500 to-green-500 bg-clip-text text-transparent"
+              class="bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 bg-clip-text text-transparent"
               >Numbers</span
             >
           </h2>
@@ -46,9 +46,11 @@ import { RouterLink } from "@angular/router";
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="text-center">
+          <div
+            class="text-center transform hover:scale-105 transition-all duration-300"
+          >
             <div
-              class="w-20 h-20 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6"
+              class="w-20 h-20 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-pink-200 animate-pink-glow"
             >
               <span class="text-white text-3xl">👥</span>
             </div>
@@ -59,9 +61,12 @@ import { RouterLink } from "@angular/router";
             </p>
           </div>
 
-          <div class="text-center">
+          <div
+            class="text-center transform hover:scale-105 transition-all duration-300"
+          >
             <div
-              class="w-20 h-20 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6"
+              class="w-20 h-20 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-pink-200 animate-pink-glow"
+              style="animation-delay: 0.5s"
             >
               <span class="text-white text-3xl">🌍</span>
             </div>
@@ -70,9 +75,12 @@ import { RouterLink } from "@angular/router";
             <p class="text-sm text-gray-500 mt-2">Global presence and impact</p>
           </div>
 
-          <div class="text-center">
+          <div
+            class="text-center transform hover:scale-105 transition-all duration-300"
+          >
             <div
-              class="w-20 h-20 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6"
+              class="w-20 h-20 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-pink-200 animate-pink-glow"
+              style="animation-delay: 1s"
             >
               <span class="text-white text-3xl">💼</span>
             </div>
@@ -81,9 +89,12 @@ import { RouterLink } from "@angular/router";
             <p class="text-sm text-gray-500 mt-2">Through our programs</p>
           </div>
 
-          <div class="text-center">
+          <div
+            class="text-center transform hover:scale-105 transition-all duration-300"
+          >
             <div
-              class="w-20 h-20 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6"
+              class="w-20 h-20 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-pink-200 animate-pink-glow"
+              style="animation-delay: 1.5s"
             >
               <span class="text-white text-3xl">💰</span>
             </div>
@@ -96,13 +107,13 @@ import { RouterLink } from "@angular/router";
     </section>
 
     <!-- Success Stories -->
-    <section class="py-16 px-8 bg-gray-50">
+    <section class="py-16 px-8 bg-pink-50">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Success
             <span
-              class="bg-gradient-to-r from-purple-600 via-cyan-500 to-green-500 bg-clip-text text-transparent"
+              class="bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 bg-clip-text text-transparent"
               >Stories</span
             >
           </h2>
@@ -114,51 +125,219 @@ import { RouterLink } from "@angular/router";
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <!-- Story 1 -->
-          <div class="bg-white rounded-lg shadow-md p-8">
+          <div
+            class="bg-white rounded-xl shadow-md p-8 border border-pink-100 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+          >
             <div class="flex items-center mb-6">
               <img
                 src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
                 alt="Sarah Johnson"
-                class="w-16 h-16 rounded-full object-cover mr-4"
+                class="w-16 h-16 rounded-full object-cover mr-4 border-4 border-pink-200"
               />
               <div>
                 <h3 class="text-xl font-semibold text-gray-900">
                   Sarah Johnson
                 </h3>
-                <p class="text-purple-600 font-medium">Tech Entrepreneur</p>
+                <p class="text-pink-600 font-medium">Tech Entrepreneur</p>
                 <p class="text-sm text-gray-500">Lagos, Nigeria</p>
               </div>
             </div>
-            <blockquote class="text-gray-600 mb-6 italic">
+            <blockquote
+              class="text-gray-600 mb-6 italic border-l-4 border-pink-300 pl-4"
+            >
               "The Women in Tech Leaders program changed my life completely. I
               went from being unemployed to founding a fintech startup that now
               employs 15 people. The mentorship and technical training gave me
               the confidence to pursue my dreams."
             </blockquote>
+            <div class="grid grid-cols-2 gap-4 text-sm">
+              <div class="bg-pink-50 p-3 rounded-lg">
+                <p class="font-semibold text-gray-900">Program</p>
+                <p class="text-pink-600">Tech Leaders 2022</p>
+              </div>
+              <div class="bg-pink-50 p-3 rounded-lg">
+                <p class="font-semibold text-gray-900">Achievement</p>
+                <p class="text-pink-600">Founded TechFin Solutions</p>
+              </div>
+            </div>
           </div>
 
           <!-- Story 2 -->
-          <div class="bg-white rounded-lg shadow-md p-8">
+          <div
+            class="bg-white rounded-xl shadow-md p-8 border border-pink-100 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+          >
             <div class="flex items-center mb-6">
               <img
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
                 alt="Maria Rodriguez"
-                class="w-16 h-16 rounded-full object-cover mr-4"
+                class="w-16 h-16 rounded-full object-cover mr-4 border-4 border-pink-200"
               />
               <div>
                 <h3 class="text-xl font-semibold text-gray-900">
                   Maria Rodriguez
                 </h3>
-                <p class="text-purple-600 font-medium">Community Leader</p>
+                <p class="text-pink-600 font-medium">Community Leader</p>
                 <p class="text-sm text-gray-500">Guatemala City, Guatemala</p>
               </div>
             </div>
-            <blockquote class="text-gray-600 mb-6 italic">
+            <blockquote
+              class="text-gray-600 mb-6 italic border-l-4 border-pink-300 pl-4"
+            >
               "Through the Leadership Development program, I found my voice and
               learned to advocate for my community. I'm now the mayor of my town
               and have implemented programs that have improved healthcare access
               for over 5,000 women."
             </blockquote>
+            <div class="grid grid-cols-2 gap-4 text-sm">
+              <div class="bg-pink-50 p-3 rounded-lg">
+                <p class="font-semibold text-gray-900">Program</p>
+                <p class="text-pink-600">Leadership Dev 2020</p>
+              </div>
+              <div class="bg-pink-50 p-3 rounded-lg">
+                <p class="font-semibold text-gray-900">Achievement</p>
+                <p class="text-pink-600">Elected Mayor</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story 3 -->
+          <div
+            class="bg-white rounded-xl shadow-md p-8 border border-pink-100 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+          >
+            <div class="flex items-center mb-6">
+              <img
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                alt="Priya Sharma"
+                class="w-16 h-16 rounded-full object-cover mr-4 border-4 border-pink-200"
+              />
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900">
+                  Priya Sharma
+                </h3>
+                <p class="text-pink-600 font-medium">
+                  Social Enterprise Founder
+                </p>
+                <p class="text-sm text-gray-500">Mumbai, India</p>
+              </div>
+            </div>
+            <blockquote
+              class="text-gray-600 mb-6 italic border-l-4 border-pink-300 pl-4"
+            >
+              "The Entrepreneurship program helped me turn my passion for
+              sustainable fashion into a thriving business. My company now
+              employs 50 women from rural areas, providing them with stable
+              income and skills training."
+            </blockquote>
+            <div class="grid grid-cols-2 gap-4 text-sm">
+              <div class="bg-pink-50 p-3 rounded-lg">
+                <p class="font-semibold text-gray-900">Program</p>
+                <p class="text-pink-600">Entrepreneurship 2021</p>
+              </div>
+              <div class="bg-pink-50 p-3 rounded-lg">
+                <p class="font-semibold text-gray-900">Achievement</p>
+                <p class="text-pink-600">Green Fashion Co.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story 4 -->
+          <div
+            class="bg-white rounded-xl shadow-md p-8 border border-pink-100 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+          >
+            <div class="flex items-center mb-6">
+              <img
+                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                alt="Fatima Al-Zahra"
+                class="w-16 h-16 rounded-full object-cover mr-4 border-4 border-pink-200"
+              />
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900">
+                  Fatima Al-Zahra
+                </h3>
+                <p class="text-pink-600 font-medium">Doctor</p>
+                <p class="text-sm text-gray-500">Amman, Jordan</p>
+              </div>
+            </div>
+            <blockquote
+              class="text-gray-600 mb-6 italic border-l-4 border-pink-300 pl-4"
+            >
+              "The Education Access scholarship enabled me to complete my
+              medical degree. Today, I run a clinic that provides free
+              healthcare to women in my community. Education truly is the key to
+              breaking cycles of poverty."
+            </blockquote>
+            <div class="grid grid-cols-2 gap-4 text-sm">
+              <div class="bg-pink-50 p-3 rounded-lg">
+                <p class="font-semibold text-gray-900">Program</p>
+                <p class="text-pink-600">Education Access 2019</p>
+              </div>
+              <div class="bg-pink-50 p-3 rounded-lg">
+                <p class="font-semibold text-gray-900">Achievement</p>
+                <p class="text-pink-600">Community Health Clinic</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global Reach -->
+    <section class="py-16 px-8 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Global
+            <span
+              class="bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 bg-clip-text text-transparent"
+              >Reach</span
+            >
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Our impact spans across continents, reaching women in diverse
+            communities worldwide.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div
+            class="text-center bg-pink-50 p-6 rounded-xl border border-pink-100"
+          >
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Africa</h3>
+            <p class="text-gray-600 mb-2">8 countries</p>
+            <p class="text-3xl font-bold text-pink-600">3,245</p>
+            <p class="text-sm text-gray-500">women empowered</p>
+          </div>
+          <div
+            class="text-center bg-pink-50 p-6 rounded-xl border border-pink-100"
+          >
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Asia</h3>
+            <p class="text-gray-600 mb-2">7 countries</p>
+            <p class="text-3xl font-bold text-pink-600">2,891</p>
+            <p class="text-sm text-gray-500">women empowered</p>
+          </div>
+          <div
+            class="text-center bg-pink-50 p-6 rounded-xl border border-pink-100"
+          >
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Latin America</h3>
+            <p class="text-gray-600 mb-2">6 countries</p>
+            <p class="text-3xl font-bold text-pink-600">2,567</p>
+            <p class="text-sm text-gray-500">women empowered</p>
+          </div>
+          <div
+            class="text-center bg-pink-50 p-6 rounded-xl border border-pink-100"
+          >
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Middle East</h3>
+            <p class="text-gray-600 mb-2">3 countries</p>
+            <p class="text-3xl font-bold text-pink-600">1,234</p>
+            <p class="text-sm text-gray-500">women empowered</p>
+          </div>
+          <div
+            class="text-center bg-pink-50 p-6 rounded-xl border border-pink-100"
+          >
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Europe</h3>
+            <p class="text-gray-600 mb-2">1 country</p>
+            <p class="text-3xl font-bold text-pink-600">486</p>
+            <p class="text-sm text-gray-500">women empowered</p>
           </div>
         </div>
       </div>
@@ -166,7 +345,7 @@ import { RouterLink } from "@angular/router";
 
     <!-- Call to Action -->
     <section
-      class="py-16 px-8 bg-gradient-to-r from-purple-600 to-cyan-500 text-white"
+      class="py-16 px-8 bg-gradient-to-r from-pink-500 to-pink-400 text-white"
     >
       <div class="max-w-6xl mx-auto text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
@@ -180,13 +359,13 @@ import { RouterLink } from "@angular/router";
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             routerLink="/donate"
-            class="inline-flex items-center justify-center px-6 py-3 text-base font-medium bg-white text-purple-600 rounded-lg hover:bg-gray-100"
+            class="inline-flex items-center justify-center px-6 py-3 text-base font-medium bg-white text-pink-600 rounded-lg hover:bg-pink-50 transform hover:scale-105 transition-all duration-200 shadow-lg"
           >
-            ♥ Make a Donation
+            💖 Make a Donation
           </a>
           <a
             routerLink="/contact"
-            class="inline-flex items-center justify-center px-6 py-3 text-base font-medium border border-white text-white rounded-lg hover:bg-white hover:text-purple-600"
+            class="inline-flex items-center justify-center px-6 py-3 text-base font-medium border-2 border-white text-white rounded-lg hover:bg-white hover:text-pink-600 transition-all duration-200"
           >
             Get Involved
           </a>

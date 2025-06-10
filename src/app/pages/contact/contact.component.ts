@@ -10,7 +10,7 @@ import { CommonModule } from "@angular/common";
   template: `
     <!-- Hero Section -->
     <section
-      class="py-12 sm:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-white to-cyan-50"
+      class="py-12 sm:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-50 via-white to-rose-50"
     >
       <div class="max-w-4xl mx-auto text-center">
         <h1
@@ -18,7 +18,7 @@ import { CommonModule } from "@angular/common";
         >
           Get in
           <span
-            class="bg-gradient-to-r from-purple-600 via-cyan-500 to-green-500 bg-clip-text text-transparent"
+            class="bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 bg-clip-text text-transparent"
             >Touch</span
           >
         </h1>
@@ -46,7 +46,7 @@ import { CommonModule } from "@angular/common";
             <div class="space-y-6 sm:space-y-8">
               <div class="flex items-start group">
                 <div
-                  class="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-xl flex items-center justify-center mr-3 sm:mr-4 lg:mr-6 flex-shrink-0 group-hover:scale-110 transition-transform duration-200"
+                  class="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-gradient-to-r from-pink-500 to-pink-400 rounded-xl flex items-center justify-center mr-3 sm:mr-4 lg:mr-6 flex-shrink-0 group-hover:scale-110 transition-transform duration-200 shadow-lg shadow-pink-200"
                 >
                   <span class="text-white text-lg sm:text-xl lg:text-2xl"
                     >📧</span
@@ -69,7 +69,7 @@ import { CommonModule } from "@angular/common";
 
               <div class="flex items-start group">
                 <div
-                  class="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-xl flex items-center justify-center mr-3 sm:mr-4 lg:mr-6 flex-shrink-0 group-hover:scale-110 transition-transform duration-200"
+                  class="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-gradient-to-r from-pink-500 to-pink-400 rounded-xl flex items-center justify-center mr-3 sm:mr-4 lg:mr-6 flex-shrink-0 group-hover:scale-110 transition-transform duration-200 shadow-lg shadow-pink-200"
                 >
                   <span class="text-white text-lg sm:text-xl lg:text-2xl"
                     >📞</span
@@ -92,7 +92,7 @@ import { CommonModule } from "@angular/common";
 
               <div class="flex items-start group">
                 <div
-                  class="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-xl flex items-center justify-center mr-3 sm:mr-4 lg:mr-6 flex-shrink-0 group-hover:scale-110 transition-transform duration-200"
+                  class="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-gradient-to-r from-pink-500 to-pink-400 rounded-xl flex items-center justify-center mr-3 sm:mr-4 lg:mr-6 flex-shrink-0 group-hover:scale-110 transition-transform duration-200 shadow-lg shadow-pink-200"
                 >
                   <span class="text-white text-lg sm:text-xl lg:text-2xl"
                     >📍</span
@@ -118,7 +118,7 @@ import { CommonModule } from "@angular/common";
 
               <div class="flex items-start group">
                 <div
-                  class="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-xl flex items-center justify-center mr-3 sm:mr-4 lg:mr-6 flex-shrink-0 group-hover:scale-110 transition-transform duration-200"
+                  class="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-gradient-to-r from-pink-500 to-pink-400 rounded-xl flex items-center justify-center mr-3 sm:mr-4 lg:mr-6 flex-shrink-0 group-hover:scale-110 transition-transform duration-200 shadow-lg shadow-pink-200"
                 >
                   <span class="text-white text-lg sm:text-xl lg:text-2xl"
                     >🕒</span
@@ -151,14 +151,14 @@ import { CommonModule } from "@angular/common";
               <div class="space-y-3 sm:space-y-4">
                 <a
                   routerLink="/donate"
-                  class="flex items-center justify-center w-full px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold text-white bg-gradient-to-r from-purple-600 to-cyan-500 rounded-lg hover:from-purple-700 hover:to-cyan-600 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                  class="flex items-center justify-center w-full px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold text-white bg-gradient-to-r from-pink-500 to-pink-400 rounded-lg hover:from-pink-600 hover:to-pink-500 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
-                  <span class="mr-2">♥</span>
+                  <span class="mr-2">💖</span>
                   Make a Donation
                 </a>
                 <a
                   routerLink="/programs"
-                  class="flex items-center justify-center w-full px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold text-gray-700 bg-white border-2 border-gray-300 rounded-lg hover:bg-gray-50 hover:border-purple-300 transition-all duration-200"
+                  class="flex items-center justify-center w-full px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold text-gray-700 bg-white border-2 border-pink-300 rounded-lg hover:bg-pink-50 hover:border-pink-400 transition-all duration-200"
                 >
                   <span class="mr-2">👥</span>
                   View Our Programs
@@ -170,7 +170,7 @@ import { CommonModule } from "@angular/common";
           <!-- Contact Form -->
           <div class="order-1 lg:order-2">
             <div
-              class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 lg:p-10 border border-gray-100"
+              class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 lg:p-10 border border-pink-100"
             >
               <h2
                 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-6 sm:mb-8"
@@ -197,8 +197,8 @@ import { CommonModule } from "@angular/common";
                       <div
                         [class]="
                           contactForm.type === 'programs'
-                            ? 'border-purple-500 bg-purple-50 text-purple-700'
-                            : 'border-gray-300 text-gray-700 hover:border-gray-400'
+                            ? 'border-pink-500 bg-pink-50 text-pink-700'
+                            : 'border-gray-300 text-gray-700 hover:border-pink-300'
                         "
                         class="border-2 rounded-lg p-3 sm:p-4 text-center transition-all duration-200"
                       >
@@ -221,13 +221,13 @@ import { CommonModule } from "@angular/common";
                       <div
                         [class]="
                           contactForm.type === 'volunteer'
-                            ? 'border-purple-500 bg-purple-50 text-purple-700'
-                            : 'border-gray-300 text-gray-700 hover:border-gray-400'
+                            ? 'border-pink-500 bg-pink-50 text-pink-700'
+                            : 'border-gray-300 text-gray-700 hover:border-pink-300'
                         "
                         class="border-2 rounded-lg p-3 sm:p-4 text-center transition-all duration-200"
                       >
                         <span class="text-lg sm:text-xl mb-1 sm:mb-2 block"
-                          >♥</span
+                          >💖</span
                         >
                         <span class="text-xs sm:text-sm font-medium"
                           >Volunteering</span
@@ -245,8 +245,8 @@ import { CommonModule } from "@angular/common";
                       <div
                         [class]="
                           contactForm.type === 'partnership'
-                            ? 'border-purple-500 bg-purple-50 text-purple-700'
-                            : 'border-gray-300 text-gray-700 hover:border-gray-400'
+                            ? 'border-pink-500 bg-pink-50 text-pink-700'
+                            : 'border-gray-300 text-gray-700 hover:border-pink-300'
                         "
                         class="border-2 rounded-lg p-3 sm:p-4 text-center transition-all duration-200"
                       >
@@ -269,8 +269,8 @@ import { CommonModule } from "@angular/common";
                       <div
                         [class]="
                           contactForm.type === 'other'
-                            ? 'border-purple-500 bg-purple-50 text-purple-700'
-                            : 'border-gray-300 text-gray-700 hover:border-gray-400'
+                            ? 'border-pink-500 bg-pink-50 text-pink-700'
+                            : 'border-gray-300 text-gray-700 hover:border-pink-300'
                         "
                         class="border-2 rounded-lg p-3 sm:p-4 text-center transition-all duration-200"
                       >
@@ -299,7 +299,7 @@ import { CommonModule } from "@angular/common";
                       [(ngModel)]="contactForm.firstName"
                       name="firstName"
                       required
-                      class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200"
+                      class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-colors duration-200"
                     />
                   </div>
                   <div>
@@ -314,7 +314,7 @@ import { CommonModule } from "@angular/common";
                       [(ngModel)]="contactForm.lastName"
                       name="lastName"
                       required
-                      class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200"
+                      class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-colors duration-200"
                     />
                   </div>
                 </div>
@@ -331,7 +331,7 @@ import { CommonModule } from "@angular/common";
                     [(ngModel)]="contactForm.email"
                     name="email"
                     required
-                    class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200"
+                    class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-colors duration-200"
                   />
                 </div>
 
@@ -348,7 +348,7 @@ import { CommonModule } from "@angular/common";
                     name="subject"
                     required
                     placeholder="Brief description of your inquiry"
-                    class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200"
+                    class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-colors duration-200"
                   />
                 </div>
 
@@ -365,16 +365,16 @@ import { CommonModule } from "@angular/common";
                     required
                     rows="4"
                     placeholder="Tell us more about your inquiry..."
-                    class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors duration-200 resize-vertical"
+                    class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-colors duration-200 resize-vertical"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
                   [disabled]="!isFormValid()"
-                  class="w-full flex items-center justify-center px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold text-white bg-gradient-to-r from-purple-600 to-cyan-500 rounded-lg hover:from-purple-700 hover:to-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                  class="w-full flex items-center justify-center px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold text-white bg-gradient-to-r from-pink-500 to-pink-400 rounded-lg hover:from-pink-600 hover:to-pink-500 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
-                  <span class="mr-2">📤</span>
+                  <span class="mr-2">💖</span>
                   Send Message
                 </button>
               </form>
@@ -385,7 +385,7 @@ import { CommonModule } from "@angular/common";
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-pink-50">
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-10 sm:mb-12 lg:mb-16">
           <h2
@@ -393,7 +393,7 @@ import { CommonModule } from "@angular/common";
           >
             Frequently Asked
             <span
-              class="bg-gradient-to-r from-purple-600 via-cyan-500 to-green-500 bg-clip-text text-transparent"
+              class="bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 bg-clip-text text-transparent"
               >Questions</span
             >
           </h2>
@@ -405,7 +405,7 @@ import { CommonModule } from "@angular/common";
 
         <div class="space-y-4 sm:space-y-6">
           <div
-            class="bg-white rounded-xl shadow-md p-4 sm:p-6 lg:p-8 hover:shadow-lg transition-shadow duration-200"
+            class="bg-white rounded-xl shadow-md p-4 sm:p-6 lg:p-8 hover:shadow-lg transition-shadow duration-200 border border-pink-100"
             *ngFor="let faq of faqs; let i = index"
           >
             <h3
@@ -429,12 +429,12 @@ import { CommonModule } from "@angular/common";
       class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
     >
       <div
-        class="bg-white rounded-2xl p-6 sm:p-8 max-w-sm sm:max-w-md w-full text-center transform scale-95 animate-pulse"
+        class="bg-white rounded-2xl p-6 sm:p-8 max-w-sm sm:max-w-md w-full text-center transform scale-95 animate-bounce border border-pink-200"
       >
         <div
-          class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6"
+          class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg shadow-pink-200 animate-pink-glow"
         >
-          <span class="text-white text-2xl sm:text-3xl">📤</span>
+          <span class="text-white text-2xl sm:text-3xl">💖</span>
         </div>
         <h3
           class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4"
@@ -446,7 +446,7 @@ import { CommonModule } from "@angular/common";
         </p>
         <button
           (click)="showSuccess = false"
-          class="px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-purple-600 to-cyan-500 rounded-lg hover:from-purple-700 hover:to-cyan-600 transform hover:scale-105 transition-all duration-200"
+          class="px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-pink-500 to-pink-400 rounded-lg hover:from-pink-600 hover:to-pink-500 transform hover:scale-105 transition-all duration-200 shadow-lg"
         >
           Continue
         </button>
