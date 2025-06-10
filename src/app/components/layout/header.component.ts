@@ -16,14 +16,27 @@ import { CommonModule } from "@angular/common";
           <a routerLink="/" class="flex items-center flex-shrink-0">
             <!-- Logo Image -->
             <div class="flex items-center">
+              <!-- Primary Logo (SVG) -->
               <img
-                src="https://images.unsplash.com/photo-1594736797933-d0d2110d2d73?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80"
+                src="assets/images/logo.svg"
                 alt="Women's Foundation Logo"
-                class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-pink-300 shadow-lg"
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover shadow-lg transition-transform duration-200 hover:scale-110"
+                (error)="onLogoError($event)"
               />
-              <!-- Backup gradient icon (hidden when image loads) -->
+
+              <!-- Fallback Logo (PNG) - Hidden by default -->
+              <img
+                #fallbackLogo
+                src="assets/images/logo.png"
+                alt="Women's Foundation Logo"
+                class="hidden w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-pink-300 shadow-lg transition-transform duration-200 hover:scale-110"
+                (error)="onFallbackError($event)"
+              />
+
+              <!-- Final Fallback - Gradient Icon -->
               <div
-                class="hidden w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-pink-500 to-pink-400 rounded-xl shadow-lg flex items-center justify-center"
+                #gradientFallback
+                class="hidden w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full shadow-lg flex items-center justify-center transition-transform duration-200 hover:scale-110"
               >
                 <span class="text-white text-lg sm:text-xl">💖</span>
               </div>
@@ -223,5 +236,24 @@ export class HeaderComponent {
 
   closeMobileMenu() {
     this.isMobileMenuOpen = false;
+  }
+
+  // Error handling for logo images
+  onLogoError(event: any) {
+    // Hide the primary logo and show the fallback
+    event.target.style.display = "none";
+    const fallbackLogo = event.target.nextElementSibling;
+    if (fallbackLogo) {
+      fallbackLogo.classList.remove("hidden");
+    }
+  }
+
+  onFallbackError(event: any) {
+    // Hide the fallback logo and show the gradient icon
+    event.target.style.display = "none";
+    const gradientFallback = event.target.nextElementSibling;
+    if (gradientFallback) {
+      gradientFallback.classList.remove("hidden");
+    }
   }
 }
