@@ -1,17 +1,7 @@
 import { Component } from "@angular/core";
 import { RouterLink } from "@angular/router";
 import { FormsModule } from "@angular/forms";
-import {
-  LucideAngularModule,
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-  Send,
-  Heart,
-  Users,
-  Building,
-} from "lucide-angular";
+import { CommonModule } from "@angular/common";
 
 @Component({
   selector: "app-contact",
@@ -20,12 +10,16 @@ import {
   template: `
     <!-- Hero Section -->
     <section
-      class="section-padding bg-gradient-to-br from-purple-50 via-white to-cyan-50"
+      class="py-16 px-8 bg-gradient-to-br from-purple-50 via-white to-cyan-50"
     >
-      <div class="container-max">
+      <div class="max-w-6xl mx-auto">
         <div class="text-center max-w-4xl mx-auto">
           <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Get in <span class="gradient-text">Touch</span>
+            Get in
+            <span
+              class="bg-gradient-to-r from-purple-600 via-cyan-500 to-green-500 bg-clip-text text-transparent"
+              >Touch</span
+            >
           </h1>
           <p class="text-xl text-gray-600 mb-8">
             Ready to join our mission? Have questions about our programs? We'd
@@ -36,11 +30,11 @@ import {
     </section>
 
     <!-- Contact Information & Form -->
-    <section class="section-padding bg-white">
-      <div class="container-max">
+    <section class="py-16 px-8 bg-white">
+      <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <!-- Contact Information -->
-          <div class="animate-fade-in-up">
+          <div>
             <h2 class="text-3xl font-bold text-gray-900 mb-8">
               Contact Information
             </h2>
@@ -48,12 +42,9 @@ import {
             <div class="space-y-6">
               <div class="flex items-start">
                 <div
-                  class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
+                  class="w-12 h-12 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
                 >
-                  <lucide-icon
-                    name="mail"
-                    class="w-6 h-6 text-white"
-                  ></lucide-icon>
+                  <span class="text-white text-xl">📧</span>
                 </div>
                 <div>
                   <h3 class="text-lg font-semibold text-gray-900 mb-1">
@@ -68,12 +59,9 @@ import {
 
               <div class="flex items-start">
                 <div
-                  class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
+                  class="w-12 h-12 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
                 >
-                  <lucide-icon
-                    name="phone"
-                    class="w-6 h-6 text-white"
-                  ></lucide-icon>
+                  <span class="text-white text-xl">📞</span>
                 </div>
                 <div>
                   <h3 class="text-lg font-semibold text-gray-900 mb-1">
@@ -88,12 +76,9 @@ import {
 
               <div class="flex items-start">
                 <div
-                  class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
+                  class="w-12 h-12 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
                 >
-                  <lucide-icon
-                    name="map-pin"
-                    class="w-6 h-6 text-white"
-                  ></lucide-icon>
+                  <span class="text-white text-xl">📍</span>
                 </div>
                 <div>
                   <h3 class="text-lg font-semibold text-gray-900 mb-1">
@@ -106,26 +91,6 @@ import {
                   <p class="text-sm text-gray-500">By appointment only</p>
                 </div>
               </div>
-
-              <div class="flex items-start">
-                <div
-                  class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
-                >
-                  <lucide-icon
-                    name="clock"
-                    class="w-6 h-6 text-white"
-                  ></lucide-icon>
-                </div>
-                <div>
-                  <h3 class="text-lg font-semibold text-gray-900 mb-1">
-                    Office Hours
-                  </h3>
-                  <p class="text-gray-600">
-                    Monday - Friday: 9:00 AM - 6:00 PM<br />Saturday: 10:00 AM -
-                    2:00 PM<br />Sunday: Closed
-                  </p>
-                </div>
-              </div>
             </div>
 
             <!-- Quick Actions -->
@@ -136,22 +101,23 @@ import {
               <div class="space-y-4">
                 <a
                   routerLink="/donate"
-                  class="btn-primary btn-primary-gradient w-full"
+                  class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-purple-600 to-cyan-500 rounded-lg hover:from-purple-700 hover:to-cyan-600"
                 >
-                  <lucide-icon name="heart" class="w-5 h-5 mr-2"></lucide-icon>
-                  Make a Donation
+                  ♥ Make a Donation
                 </a>
-                <a routerLink="/programs" class="btn-secondary w-full">
-                  <lucide-icon name="users" class="w-5 h-5 mr-2"></lucide-icon>
-                  View Our Programs
+                <a
+                  routerLink="/programs"
+                  class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50"
+                >
+                  👥 View Our Programs
                 </a>
               </div>
             </div>
           </div>
 
           <!-- Contact Form -->
-          <div class="animate-fade-in-up">
-            <div class="card p-8">
+          <div>
+            <div class="bg-white rounded-lg shadow-md p-8">
               <h2 class="text-2xl font-bold text-gray-900 mb-6">
                 Send us a Message
               </h2>
@@ -179,10 +145,7 @@ import {
                         "
                         class="border-2 rounded-lg p-3 text-center cursor-pointer transition-all"
                       >
-                        <lucide-icon
-                          name="users"
-                          class="w-5 h-5 mx-auto mb-1"
-                        ></lucide-icon>
+                        <span class="text-lg mb-1 block">👥</span>
                         <span class="text-sm font-medium"
                           >Joining Programs</span
                         >
@@ -204,10 +167,7 @@ import {
                         "
                         class="border-2 rounded-lg p-3 text-center cursor-pointer transition-all"
                       >
-                        <lucide-icon
-                          name="heart"
-                          class="w-5 h-5 mx-auto mb-1"
-                        ></lucide-icon>
+                        <span class="text-lg mb-1 block">♥</span>
                         <span class="text-sm font-medium">Volunteering</span>
                       </div>
                     </label>
@@ -227,10 +187,7 @@ import {
                         "
                         class="border-2 rounded-lg p-3 text-center cursor-pointer transition-all"
                       >
-                        <lucide-icon
-                          name="building"
-                          class="w-5 h-5 mx-auto mb-1"
-                        ></lucide-icon>
+                        <span class="text-lg mb-1 block">🏢</span>
                         <span class="text-sm font-medium">Partnership</span>
                       </div>
                     </label>
@@ -250,10 +207,7 @@ import {
                         "
                         class="border-2 rounded-lg p-3 text-center cursor-pointer transition-all"
                       >
-                        <lucide-icon
-                          name="mail"
-                          class="w-5 h-5 mx-auto mb-1"
-                        ></lucide-icon>
+                        <span class="text-lg mb-1 block">📧</span>
                         <span class="text-sm font-medium">Other</span>
                       </div>
                     </label>
@@ -312,36 +266,6 @@ import {
 
                 <div>
                   <label
-                    for="phone"
-                    class="block text-sm font-medium text-gray-700 mb-1"
-                    >Phone Number</label
-                  >
-                  <input
-                    type="tel"
-                    id="phone"
-                    [(ngModel)]="contactForm.phone"
-                    name="phone"
-                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    for="organization"
-                    class="block text-sm font-medium text-gray-700 mb-1"
-                    >Organization (if applicable)</label
-                  >
-                  <input
-                    type="text"
-                    id="organization"
-                    [(ngModel)]="contactForm.organization"
-                    name="organization"
-                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500"
-                  />
-                </div>
-
-                <div>
-                  <label
                     for="subject"
                     class="block text-sm font-medium text-gray-700 mb-1"
                     >Subject *</label
@@ -369,32 +293,17 @@ import {
                     name="message"
                     required
                     rows="5"
-                    placeholder="Tell us more about your inquiry, background, or how you'd like to get involved..."
+                    placeholder="Tell us more about your inquiry..."
                     class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500"
                   ></textarea>
-                </div>
-
-                <div class="flex items-start">
-                  <input
-                    type="checkbox"
-                    id="newsletter"
-                    [(ngModel)]="contactForm.newsletter"
-                    name="newsletter"
-                    class="mt-1 mr-3"
-                  />
-                  <label for="newsletter" class="text-sm text-gray-600">
-                    I'd like to receive updates about Women's Foundation
-                    programs and impact stories
-                  </label>
                 </div>
 
                 <button
                   type="submit"
                   [disabled]="!isFormValid()"
-                  class="w-full btn-primary btn-primary-gradient"
+                  class="w-full inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-purple-600 to-cyan-500 rounded-lg hover:from-purple-700 hover:to-cyan-600 disabled:opacity-50"
                 >
-                  <lucide-icon name="send" class="w-5 h-5 mr-2"></lucide-icon>
-                  Send Message
+                  📤 Send Message
                 </button>
               </form>
             </div>
@@ -404,11 +313,15 @@ import {
     </section>
 
     <!-- FAQ Section -->
-    <section class="section-padding bg-gray-50">
-      <div class="container-max">
+    <section class="py-16 px-8 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Frequently Asked <span class="gradient-text">Questions</span>
+            Frequently Asked
+            <span
+              class="bg-gradient-to-r from-purple-600 via-cyan-500 to-green-500 bg-clip-text text-transparent"
+              >Questions</span
+            >
           </h2>
           <p class="text-lg text-gray-600 max-w-2xl mx-auto">
             Quick answers to common questions about our programs and how to get
@@ -417,7 +330,10 @@ import {
         </div>
 
         <div class="max-w-3xl mx-auto space-y-6">
-          <div class="card p-6" *ngFor="let faq of faqs">
+          <div
+            class="bg-white rounded-lg shadow-md p-6"
+            *ngFor="let faq of faqs"
+          >
             <h3 class="text-lg font-semibold text-gray-900 mb-3">
               {{ faq.question }}
             </h3>
@@ -434,9 +350,9 @@ import {
     >
       <div class="bg-white rounded-lg p-8 max-w-md w-full text-center">
         <div
-          class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4"
+          class="w-16 h-16 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4"
         >
-          <lucide-icon name="send" class="w-8 h-8 text-white"></lucide-icon>
+          <span class="text-white text-2xl">📤</span>
         </div>
         <h3 class="text-2xl font-bold text-gray-900 mb-4">Message Sent!</h3>
         <p class="text-gray-600 mb-6">
@@ -444,7 +360,7 @@ import {
         </p>
         <button
           (click)="showSuccess = false"
-          class="btn-primary btn-primary-gradient"
+          class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-purple-600 to-cyan-500 rounded-lg hover:from-purple-700 hover:to-cyan-600"
         >
           Continue
         </button>
@@ -453,15 +369,6 @@ import {
   `,
 })
 export class ContactComponent {
-  readonly Mail = Mail;
-  readonly Phone = Phone;
-  readonly MapPin = MapPin;
-  readonly Clock = Clock;
-  readonly Send = Send;
-  readonly Heart = Heart;
-  readonly Users = Users;
-  readonly Building = Building;
-
   showSuccess = false;
 
   contactForm = {
@@ -469,11 +376,8 @@ export class ContactComponent {
     firstName: "",
     lastName: "",
     email: "",
-    phone: "",
-    organization: "",
     subject: "",
     message: "",
-    newsletter: false,
   };
 
   faqs = [
@@ -492,16 +396,6 @@ export class ContactComponent {
       answer:
         "Yes! We offer many remote volunteering opportunities including online mentoring, curriculum development, social media support, and virtual event assistance. Let us know your skills and availability.",
     },
-    {
-      question: "How can my company partner with you?",
-      answer:
-        "We welcome corporate partnerships through sponsorships, employee volunteer programs, skills-based volunteering, and CSR initiatives. Contact us to discuss how we can create a meaningful partnership.",
-    },
-    {
-      question: "Are donations tax-deductible?",
-      answer:
-        "Yes, we are a registered 501(c)(3) nonprofit organization. All donations are tax-deductible to the full extent allowed by law. You'll receive a receipt for your records.",
-    },
   ];
 
   isFormValid(): boolean {
@@ -517,22 +411,15 @@ export class ContactComponent {
 
   handleSubmit() {
     if (this.isFormValid()) {
-      // In a real application, this would send the form data to a server
       console.log("Submitting contact form:", this.contactForm);
-
       this.showSuccess = true;
-
-      // Reset form
       this.contactForm = {
         type: "",
         firstName: "",
         lastName: "",
         email: "",
-        phone: "",
-        organization: "",
         subject: "",
         message: "",
-        newsletter: false,
       };
     }
   }

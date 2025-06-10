@@ -1,16 +1,7 @@
 import { Component } from "@angular/core";
 import { RouterLink } from "@angular/router";
 import { FormsModule } from "@angular/forms";
-import {
-  LucideAngularModule,
-  Heart,
-  DollarSign,
-  Users,
-  Gift,
-  Shield,
-  CreditCard,
-  CheckCircle,
-} from "lucide-angular";
+import { CommonModule } from "@angular/common";
 
 @Component({
   selector: "app-donate",
@@ -19,12 +10,16 @@ import {
   template: `
     <!-- Hero Section -->
     <section
-      class="section-padding bg-gradient-to-br from-purple-50 via-white to-cyan-50"
+      class="py-16 px-8 bg-gradient-to-br from-purple-50 via-white to-cyan-50"
     >
-      <div class="container-max">
+      <div class="max-w-6xl mx-auto">
         <div class="text-center max-w-4xl mx-auto">
           <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Make a <span class="gradient-text">Difference</span>
+            Make a
+            <span
+              class="bg-gradient-to-r from-purple-600 via-cyan-500 to-green-500 bg-clip-text text-transparent"
+              >Difference</span
+            >
           </h1>
           <p class="text-xl text-gray-600 mb-8">
             Your donation helps us empower women, break barriers, and create
@@ -36,11 +31,15 @@ import {
     </section>
 
     <!-- Donation Impact -->
-    <section class="section-padding bg-white">
-      <div class="container-max">
+    <section class="py-16 px-8 bg-white">
+      <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Your <span class="gradient-text">Impact</span>
+            Your
+            <span
+              class="bg-gradient-to-r from-purple-600 via-cyan-500 to-green-500 bg-clip-text text-transparent"
+              >Impact</span
+            >
           </h2>
           <p class="text-lg text-gray-600 max-w-2xl mx-auto">
             See how your donation directly translates into opportunities and
@@ -49,70 +48,49 @@ import {
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="card p-6 text-center animate-fade-in-up">
+          <div class="bg-white rounded-lg shadow-md p-6 text-center">
             <div
-              class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4"
+              class="w-16 h-16 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4"
             >
-              <lucide-icon
-                name="dollar-sign"
-                class="w-8 h-8 text-white"
-              ></lucide-icon>
+              <span class="text-white text-2xl">💰</span>
             </div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-2">$25</h3>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">&#36;25</h3>
             <p class="text-gray-600">
               Provides basic supplies for a woman in our skills training program
             </p>
           </div>
 
-          <div
-            class="card p-6 text-center animate-fade-in-up"
-            style="animation-delay: 0.1s"
-          >
+          <div class="bg-white rounded-lg shadow-md p-6 text-center">
             <div
-              class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4"
+              class="w-16 h-16 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4"
             >
-              <lucide-icon
-                name="dollar-sign"
-                class="w-8 h-8 text-white"
-              ></lucide-icon>
+              <span class="text-white text-2xl">💰</span>
             </div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-2">$50</h3>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">&#36;50</h3>
             <p class="text-gray-600">
               Funds a week of online education courses for a student
             </p>
           </div>
 
-          <div
-            class="card p-6 text-center animate-fade-in-up"
-            style="animation-delay: 0.2s"
-          >
+          <div class="bg-white rounded-lg shadow-md p-6 text-center">
             <div
-              class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4"
+              class="w-16 h-16 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4"
             >
-              <lucide-icon
-                name="dollar-sign"
-                class="w-8 h-8 text-white"
-              ></lucide-icon>
+              <span class="text-white text-2xl">💰</span>
             </div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-2">$100</h3>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">&#36;100</h3>
             <p class="text-gray-600">
               Supports a woman entrepreneur with business mentorship
             </p>
           </div>
 
-          <div
-            class="card p-6 text-center animate-fade-in-up"
-            style="animation-delay: 0.3s"
-          >
+          <div class="bg-white rounded-lg shadow-md p-6 text-center">
             <div
-              class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4"
+              class="w-16 h-16 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4"
             >
-              <lucide-icon
-                name="dollar-sign"
-                class="w-8 h-8 text-white"
-              ></lucide-icon>
+              <span class="text-white text-2xl">💰</span>
             </div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-2">$250</h3>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">&#36;250</h3>
             <p class="text-gray-600">
               Provides a full scholarship for our leadership development program
             </p>
@@ -122,10 +100,10 @@ import {
     </section>
 
     <!-- Donation Form -->
-    <section class="section-padding bg-gray-50">
-      <div class="container-max">
+    <section class="py-16 px-8 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
         <div class="max-w-2xl mx-auto">
-          <div class="card p-8">
+          <div class="bg-white rounded-lg shadow-md p-8">
             <div class="text-center mb-8">
               <h2 class="text-3xl font-bold text-gray-900 mb-4">
                 Choose Your Donation Amount
@@ -158,10 +136,7 @@ import {
                       "
                       class="border-2 rounded-lg p-4 text-center cursor-pointer transition-all"
                     >
-                      <lucide-icon
-                        name="gift"
-                        class="w-6 h-6 mx-auto mb-2"
-                      ></lucide-icon>
+                      <span class="text-2xl mb-2 block">🎁</span>
                       <span class="font-medium">One-time</span>
                     </div>
                   </label>
@@ -181,10 +156,7 @@ import {
                       "
                       class="border-2 rounded-lg p-4 text-center cursor-pointer transition-all"
                     >
-                      <lucide-icon
-                        name="heart"
-                        class="w-6 h-6 mx-auto mb-2"
-                      ></lucide-icon>
+                      <span class="text-2xl mb-2 block">♥</span>
                       <span class="font-medium">Monthly</span>
                     </div>
                   </label>
@@ -226,7 +198,7 @@ import {
                   <div class="relative">
                     <span
                       class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"
-                      >$</span
+                      >&#36;</span
                     >
                     <input
                       type="number"
@@ -295,30 +267,12 @@ import {
                 </div>
               </div>
 
-              <!-- Payment Security Notice -->
-              <div class="bg-green-50 border border-green-200 rounded-lg p-4">
-                <div class="flex items-center">
-                  <lucide-icon
-                    name="shield"
-                    class="w-5 h-5 text-green-600 mr-2"
-                  ></lucide-icon>
-                  <span class="text-sm text-green-800 font-medium"
-                    >Secure Payment</span
-                  >
-                </div>
-                <p class="text-sm text-green-700 mt-1">
-                  Your payment information is encrypted and secure. We never
-                  store your payment details.
-                </p>
-              </div>
-
               <!-- Donate Button -->
               <button
                 type="submit"
-                class="w-full btn-primary btn-primary-gradient text-lg py-3"
+                class="w-full inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-white bg-gradient-to-r from-purple-600 to-cyan-500 rounded-lg hover:from-purple-700 hover:to-cyan-600"
               >
-                <lucide-icon name="heart" class="w-5 h-5 mr-2"></lucide-icon>
-                Donate {{ getDonationAmount() | currency }}
+                ♥ Donate {{ getDonationAmount() | currency }}
                 {{ donationType === "monthly" ? "/month" : "" }}
               </button>
             </form>
@@ -327,156 +281,16 @@ import {
       </div>
     </section>
 
-    <!-- Why Donate -->
-    <section class="section-padding bg-white">
-      <div class="container-max">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Why <span class="gradient-text">Donate</span>?
-          </h2>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            Your support helps us continue our vital work in empowering women
-            worldwide.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="text-center animate-fade-in-up">
-            <div
-              class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <lucide-icon
-                name="users"
-                class="w-8 h-8 text-white"
-              ></lucide-icon>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-              Direct Impact
-            </h3>
-            <p class="text-gray-600">
-              95% of donations go directly to programs. Your money creates
-              immediate, measurable change in women's lives.
-            </p>
-          </div>
-
-          <div
-            class="text-center animate-fade-in-up"
-            style="animation-delay: 0.1s"
-          >
-            <div
-              class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <lucide-icon
-                name="check-circle"
-                class="w-8 h-8 text-white"
-              ></lucide-icon>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-              Proven Results
-            </h3>
-            <p class="text-gray-600">
-              Over 10 years of experience with documented success stories and
-              transparent impact reporting.
-            </p>
-          </div>
-
-          <div
-            class="text-center animate-fade-in-up"
-            style="animation-delay: 0.2s"
-          >
-            <div
-              class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <lucide-icon
-                name="shield"
-                class="w-8 h-8 text-white"
-              ></lucide-icon>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-              Trusted Organization
-            </h3>
-            <p class="text-gray-600">
-              Recognized by leading organizations and awarded for our commitment
-              to transparency and effectiveness.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Other Ways to Help -->
-    <section class="section-padding bg-gray-50">
-      <div class="container-max">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Other Ways to <span class="gradient-text">Help</span>
-          </h2>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            Can't donate right now? There are other meaningful ways to support
-            our mission.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="card p-6 text-center">
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">Volunteer</h3>
-            <p class="text-gray-600 mb-4">
-              Share your skills and time to directly support our programs and
-              participants.
-            </p>
-            <a
-              routerLink="/contact"
-              class="text-purple-600 font-medium hover:text-purple-700"
-            >
-              Learn More →
-            </a>
-          </div>
-
-          <div class="card p-6 text-center">
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-              Corporate Partnership
-            </h3>
-            <p class="text-gray-600 mb-4">
-              Partner with us to create employee engagement programs and CSR
-              initiatives.
-            </p>
-            <a
-              routerLink="/contact"
-              class="text-purple-600 font-medium hover:text-purple-700"
-            >
-              Partner with Us →
-            </a>
-          </div>
-
-          <div class="card p-6 text-center">
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-              Spread the Word
-            </h3>
-            <p class="text-gray-600 mb-4">
-              Share our mission on social media and help us reach more
-              supporters.
-            </p>
-            <a
-              href="#"
-              class="text-purple-600 font-medium hover:text-purple-700"
-            >
-              Share Now →
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Thank You Message (if donated) -->
+    <!-- Thank You Message -->
     <div
       *ngIf="showThankYou"
       class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
     >
       <div class="bg-white rounded-lg p-8 max-w-md w-full text-center">
         <div
-          class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4"
+          class="w-16 h-16 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4"
         >
-          <lucide-icon name="heart" class="w-8 h-8 text-white"></lucide-icon>
+          <span class="text-white text-2xl">♥</span>
         </div>
         <h3 class="text-2xl font-bold text-gray-900 mb-4">Thank You!</h3>
         <p class="text-gray-600 mb-6">
@@ -485,7 +299,7 @@ import {
         </p>
         <button
           (click)="showThankYou = false"
-          class="btn-primary btn-primary-gradient"
+          class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-purple-600 to-cyan-500 rounded-lg hover:from-purple-700 hover:to-cyan-600"
         >
           Continue
         </button>
@@ -494,14 +308,6 @@ import {
   `,
 })
 export class DonateComponent {
-  readonly Heart = Heart;
-  readonly DollarSign = DollarSign;
-  readonly Users = Users;
-  readonly Gift = Gift;
-  readonly Shield = Shield;
-  readonly CreditCard = CreditCard;
-  readonly CheckCircle = CheckCircle;
-
   donationType: "one-time" | "monthly" = "one-time";
   selectedAmount: number | null = null;
   customAmount: number | null = null;
@@ -532,7 +338,6 @@ export class DonateComponent {
       this.donorInfo.lastName &&
       this.donorInfo.email
     ) {
-      // In a real application, this would integrate with a payment processor
       console.log("Processing donation:", {
         amount,
         type: this.donationType,
