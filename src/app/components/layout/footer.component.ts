@@ -1,10 +1,11 @@
 import { Component } from "@angular/core";
 import { RouterLink } from "@angular/router";
+import { CommonModule } from "@angular/common";
 
 @Component({
   selector: "app-footer",
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, CommonModule],
   template: `
     <footer class="bg-gray-900 text-white">
       <div class="max-w-6xl mx-auto px-8 py-16">
@@ -68,7 +69,7 @@ import { RouterLink } from "@angular/router";
             <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
             <div class="space-y-3">
               <div class="flex items-center">
-                <span class="text-gray-300">info@womensfoundation.org</span>
+                <span class="text-gray-300">info&#64;womensfoundation.org</span>
               </div>
               <div class="flex items-center">
                 <span class="text-gray-300">+1 (555) 123-4567</span>
@@ -86,7 +87,9 @@ import { RouterLink } from "@angular/router";
         <div class="border-t border-gray-700 mt-12 pt-8 text-center">
           <p class="text-gray-400">
             © {{ currentYear }} Women's Foundation. All rights reserved.
-            <span class="text-purple-400">Made with ♥ for women everywhere.</span>
+            <span class="text-purple-400"
+              >Made with ♥ for women everywhere.</span
+            >
           </p>
         </div>
       </div>

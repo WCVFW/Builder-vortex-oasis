@@ -16,7 +16,7 @@ import {
 @Component({
   selector: "app-contact",
   standalone: true,
-  imports: [RouterLink, FormsModule, LucideAngularModule],
+  imports: [RouterLink, FormsModule, CommonModule],
   template: `
     <!-- Hero Section -->
     <section

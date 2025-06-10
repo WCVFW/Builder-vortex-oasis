@@ -15,7 +15,7 @@ import {
 @Component({
   selector: "app-donate",
   standalone: true,
-  imports: [RouterLink, FormsModule, LucideAngularModule],
+  imports: [RouterLink, FormsModule, CommonModule],
   template: `
     <!-- Hero Section -->
     <section
@@ -213,7 +213,7 @@ import {
                       "
                       class="border-2 rounded-lg p-3 text-center cursor-pointer transition-all"
                     >
-                      <span class="font-semibold">${{ amount }}</span>
+                      <span class="font-semibold">&#36;{{ amount }}</span>
                     </div>
                   </label>
                 </div>
