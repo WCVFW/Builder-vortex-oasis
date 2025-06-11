@@ -9,9 +9,25 @@ import { CommonModule } from "@angular/common";
   template: `
     <!-- Hero Section -->
     <section
-      class="py-12 sm:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-50 via-white to-rose-50"
+      class="relative py-12 sm:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center bg-gradient-to-br from-pink-50 via-white to-rose-50 overflow-hidden"
+      style="background-image: linear-gradient(rgba(255, 192, 203, 0.4), rgba(255, 182, 193, 0.6)), url('assets/images/hero-background.jpg'); background-size: cover; background-position: center; background-attachment: fixed;"
     >
-      <div class="max-w-7xl mx-auto">
+      <!-- Floating background elements -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div
+          class="absolute top-1/4 left-1/4 w-32 h-32 bg-pink-300/20 rounded-full blur-xl animate-pulse"
+        ></div>
+        <div
+          class="absolute top-3/4 right-1/4 w-48 h-48 bg-rose-300/20 rounded-full blur-xl animate-pulse"
+          style="animation-delay: 1s;"
+        ></div>
+        <div
+          class="absolute bottom-1/4 left-1/3 w-24 h-24 bg-pink-400/20 rounded-full blur-xl animate-pulse"
+          style="animation-delay: 2s;"
+        ></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto relative z-10">
         <div
           class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center"
         >
@@ -35,21 +51,33 @@ import { CommonModule } from "@angular/common";
               education, support, and community building.
             </p>
             <div
-              class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start"
             >
               <a
                 routerLink="/donate"
-                class="inline-flex items-center justify-center px-6 lg:px-8 py-3 lg:py-4 text-base lg:text-lg font-semibold text-white bg-gradient-to-r from-pink-500 to-pink-400 rounded-lg hover:from-pink-600 hover:to-pink-500 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl animate-pink-glow"
+                class="group relative inline-flex items-center justify-center px-8 lg:px-12 py-4 lg:py-5 text-lg lg:text-xl font-bold text-white bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 rounded-2xl hover:from-pink-600 hover:via-pink-500 hover:to-rose-500 transform hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-pink-500/50 border-2 border-pink-300 animate-bounce"
+                style="animation-duration: 2s; animation-iteration-count: infinite;"
               >
-                <span class="mr-2">💖</span>
-                Make a Donation
+                <span
+                  class="absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-600 to-rose-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></span>
+                <span class="relative flex items-center">
+                  <span class="mr-3 text-xl">💖</span>
+                  <span class="tracking-wide">MAKE A DONATION</span>
+                </span>
+                <div
+                  class="absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-500 to-rose-400 blur-sm opacity-50 -z-10 group-hover:blur-md group-hover:opacity-75 transition-all duration-300"
+                ></div>
               </a>
               <a
                 routerLink="/programs"
-                class="inline-flex items-center justify-center px-6 lg:px-8 py-3 lg:py-4 text-base lg:text-lg font-semibold text-gray-700 bg-white border-2 border-pink-300 rounded-lg hover:bg-pink-50 hover:border-pink-400 transition-all duration-200"
+                class="group inline-flex items-center justify-center px-8 lg:px-12 py-4 lg:py-5 text-lg lg:text-xl font-bold text-pink-600 bg-white/90 backdrop-blur-sm border-3 border-pink-400 rounded-2xl hover:bg-pink-50 hover:border-pink-500 hover:text-pink-700 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl"
               >
-                Learn More
-                <span class="ml-2">→</span>
+                <span class="tracking-wide">LEARN MORE</span>
+                <span
+                  class="ml-3 text-xl group-hover:translate-x-1 transition-transform duration-300"
+                  >→</span
+                >
               </a>
             </div>
           </div>
@@ -248,21 +276,32 @@ import { CommonModule } from "@angular/common";
           every woman has the opportunity to reach her full potential.
         </p>
         <div
-          class="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto"
+          class="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto"
         >
           <a
             routerLink="/donate"
-            class="inline-flex items-center justify-center px-6 lg:px-8 py-3 lg:py-4 text-base lg:text-lg font-semibold bg-white text-pink-600 rounded-lg hover:bg-pink-50 transform hover:scale-105 transition-all duration-200 shadow-lg"
+            class="group relative inline-flex items-center justify-center px-8 lg:px-12 py-4 lg:py-5 text-lg lg:text-xl font-bold bg-white text-pink-600 rounded-2xl hover:bg-pink-50 transform hover:scale-110 transition-all duration-300 shadow-2xl border-2 border-white/50 animate-pulse"
           >
-            <span class="mr-2">💖</span>
-            Donate Now
+            <span
+              class="absolute inset-0 rounded-2xl bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-2xl"
+            ></span>
+            <span class="relative flex items-center">
+              <span class="mr-3 text-xl">💖</span>
+              <span class="tracking-wide">DONATE NOW</span>
+            </span>
+            <div
+              class="absolute inset-0 rounded-2xl bg-white blur-sm opacity-50 -z-10 group-hover:blur-md group-hover:opacity-75 transition-all duration-300"
+            ></div>
           </a>
           <a
             routerLink="/contact"
-            class="inline-flex items-center justify-center px-6 lg:px-8 py-3 lg:py-4 text-base lg:text-lg font-semibold border-2 border-white text-white rounded-lg hover:bg-white hover:text-pink-600 transition-all duration-200"
+            class="group inline-flex items-center justify-center px-8 lg:px-12 py-4 lg:py-5 text-lg lg:text-xl font-bold border-3 border-white text-white rounded-2xl hover:bg-white hover:text-pink-600 transition-all duration-300 backdrop-blur-sm bg-white/10"
           >
-            Get Involved
-            <span class="ml-2">→</span>
+            <span class="tracking-wide">GET INVOLVED</span>
+            <span
+              class="ml-3 text-xl group-hover:translate-x-1 transition-transform duration-300"
+              >→</span
+            >
           </a>
         </div>
       </div>
