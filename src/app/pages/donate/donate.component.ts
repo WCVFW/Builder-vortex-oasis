@@ -150,7 +150,9 @@ import { CommonModule } from "@angular/common";
                     "
                     class="border-2 rounded-xl p-4 sm:p-6 text-center transition-all duration-200"
                   >
-                    <span class="text-2xl sm:text-3xl mb-2 sm:mb-3 block"
+                    <span
+                      class="text-2xl sm:text-3xl mb-2 sm:mb-3 block"
+                      style="color: white !important; filter: brightness(1.5);"
                       >💖</span
                     >
                     <span class="text-sm sm:text-base lg:text-lg font-semibold"

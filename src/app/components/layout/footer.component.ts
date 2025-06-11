@@ -123,6 +123,7 @@ import { CommonModule } from "@angular/common";
                 >
                   <span
                     class="mr-2 group-hover:mr-3 transition-all duration-200"
+                    style="color: white !important; filter: brightness(1.5);"
                     >💖</span
                   >
                   Donate

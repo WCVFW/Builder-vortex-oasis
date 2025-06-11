@@ -230,7 +230,9 @@ import { CommonModule } from "@angular/common";
                         "
                         class="border-2 rounded-lg p-3 sm:p-4 text-center transition-all duration-200"
                       >
-                        <span class="text-lg sm:text-xl mb-1 sm:mb-2 block"
+                        <span
+                          class="text-lg sm:text-xl mb-1 sm:mb-2 block"
+                          style="color: white !important; filter: brightness(1.5);"
                           >💖</span
                         >
                         <span class="text-xs sm:text-sm font-medium"
