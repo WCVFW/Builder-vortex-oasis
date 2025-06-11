@@ -38,6 +38,7 @@ import { CommonModule } from "@angular/common";
               class="block sm:inline bg-gradient-to-r from-pink-200 via-pink-100 to-rose-100 bg-clip-text text-transparent"
               >Women</span
             >
+<<<<<<< HEAD
             <span class="block sm:inline">to Change the World</span>
           </h1>
           <p
@@ -53,6 +54,15 @@ import { CommonModule } from "@angular/common";
             *ngIf="showMoreContent"
             class="mb-8 sm:mb-10 lg:mb-12 p-6 sm:p-8 lg:p-10 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 max-w-4xl mx-auto"
           >
+=======
+              Empowering
+              <span
+                class="block sm:inline bg-gradient-to-r from-pink-600 via-pink-400 to-blue-200 bg-clip-text text-transparent"
+                >Women</span
+              >
+              <span class="block sm:inline">to Change the World</span>
+            </h1>
+>>>>>>> fe27855ac496a62a8f19bd3e10304d1ee4bbda4c
             <p
               class="text-white text-base sm:text-lg lg:text-xl leading-relaxed mb-6 opacity-90"
             >
@@ -76,6 +86,7 @@ import { CommonModule } from "@angular/common";
             </p>
           </div>
 
+<<<<<<< HEAD
           <div
             class="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center max-w-3xl mx-auto"
           >
@@ -83,6 +94,36 @@ import { CommonModule } from "@angular/common";
               routerLink="/donate"
               class="group relative inline-flex items-center justify-center px-8 sm:px-10 lg:px-12 xl:px-16 py-4 sm:py-5 lg:py-6 xl:py-7 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-white bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 rounded-2xl hover:from-pink-600 hover:via-pink-500 hover:to-rose-500 transform hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-pink-500/50 border-2 border-pink-300 animate-pulse min-w-[250px] sm:min-w-[280px] lg:min-w-[320px]"
               style="animation-duration: 2s; animation-iteration-count: infinite;"
+=======
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            >
+              <a
+                routerLink="/donate"
+                class="group relative inline-flex items-center justify-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold text-white bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 rounded-lg hover:from-pink-600 hover:via-pink-500 hover:to-rose-500 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-pink-500/50 border border-pink-300"
+              >
+                <span class="mr-2 text-base sm:text-lg">💖</span>
+                <span class="tracking-wide">Make a Donation</span>
+              </a>
+              <button
+                (click)="toggleMoreContent()"
+                class="group inline-flex items-center justify-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold text-white bg-white/20 backdrop-blur-sm border-2 border-white/40 rounded-lg hover:bg-white/30 hover:border-white/60 transform hover:scale-105 transition-all duration-300 shadow-lg"
+              >
+                <span class="tracking-wide">{{
+                  showMoreContent ? "Show Less" : "Read More"
+                }}</span>
+                <span
+                  class="ml-2 text-base sm:text-lg group-hover:translate-x-1 transition-transform duration-300"
+                  >{{ showMoreContent ? "↑" : "→" }}</span
+                >
+              </button>
+            </div>
+          </div>
+          <!-- Hero Image -->
+          <div class="order-1 lg:order-2 relative">
+            <div
+              class="relative z-10 bg-white/10 backdrop-blur-sm rounded-2xl shadow-2xl p-4 sm:p-6 lg:p-8 transform hover:scale-105 transition-transform duration-300 border border-white/20"
+>>>>>>> fe27855ac496a62a8f19bd3e10304d1ee4bbda4c
             >
               <span
                 class="absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-600 to-rose-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -320,6 +361,7 @@ import { CommonModule } from "@angular/common";
         </div>
       </div>
     </section>
+<<<<<<< HEAD
 
     <!-- Floating Action Buttons - Always Visible -->
     <div
@@ -349,6 +391,8 @@ import { CommonModule } from "@angular/common";
         >
       </a>
     </div>
+=======
+>>>>>>> fe27855ac496a62a8f19bd3e10304d1ee4bbda4c
   `,
 })
 export class HomeComponent {
