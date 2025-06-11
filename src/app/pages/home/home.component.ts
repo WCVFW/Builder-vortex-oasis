@@ -79,30 +79,28 @@ import { CommonModule } from "@angular/common";
               </p>
             </div>
 
-            <div
-              class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-            >
-              <a
-                routerLink="/donate"
-                class="group relative inline-flex items-center justify-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold text-white bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 rounded-lg hover:from-pink-600 hover:via-pink-500 hover:to-rose-500 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-pink-500/50 border border-pink-300"
-              >
-                <span class="mr-2 text-base sm:text-lg">💖</span>
-                <span class="tracking-wide">Make a Donation</span>
-              </a>
-              <button
-                (click)="toggleMoreContent()"
-                class="group inline-flex items-center justify-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold text-white bg-white/20 backdrop-blur-sm border-2 border-white/40 rounded-lg hover:bg-white/30 hover:border-white/60 transform hover:scale-105 transition-all duration-300 shadow-lg"
-              >
-                <span class="tracking-wide">{{
-                  showMoreContent ? "Show Less" : "Read More"
-                }}</span>
-                <span
-                  class="ml-2 text-base sm:text-lg group-hover:translate-x-1 transition-transform duration-300"
-                  >{{ showMoreContent ? "↑" : "→" }}</span
-                >
-              </button>
-            </div>
-          </div>
+        <div
+          class="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center max-w-2xl mx-auto"
+        >
+          <a
+            routerLink="/donate"
+            class="group relative inline-flex items-center justify-center px-8 sm:px-10 lg:px-12 xl:px-16 py-4 sm:py-5 lg:py-6 xl:py-7 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold bg-white text-pink-600 rounded-2xl hover:bg-pink-50 transform hover:scale-110 transition-all duration-300 shadow-2xl border-2 border-white/50 animate-bounce min-w-[200px] sm:min-w-[250px] lg:min-w-[300px]"
+          >
+            <span class="absolute inset-0 rounded-2xl bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-2xl"></span>
+            <span class="relative flex items-center justify-center w-full">
+              <span class="mr-3 sm:mr-4 text-xl sm:text-2xl lg:text-3xl">💖</span>
+              <span class="tracking-wide font-extrabold">DONATE NOW</span>
+            </span>
+            <div class="absolute inset-0 rounded-2xl bg-white blur-sm opacity-50 -z-10 group-hover:blur-md group-hover:opacity-75 transition-all duration-300"></div>
+          </a>
+          <a
+            routerLink="/contact"
+            class="group inline-flex items-center justify-center px-8 sm:px-10 lg:px-12 xl:px-16 py-4 sm:py-5 lg:py-6 xl:py-7 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold border-3 border-white text-white rounded-2xl hover:bg-white hover:text-pink-600 transition-all duration-300 backdrop-blur-sm bg-white/10 min-w-[200px] sm:min-w-[250px] lg:min-w-[300px]"
+          >
+            <span class="tracking-wide font-extrabold">GET INVOLVED</span>
+            <span class="ml-3 sm:ml-4 text-xl sm:text-2xl lg:text-3xl group-hover:translate-x-1 transition-transform duration-300">→</span>
+          </a>
+        </div>
           <!-- Hero Image -->
           <div class="order-1 lg:order-2 relative">
             <div
@@ -321,6 +319,27 @@ import { CommonModule } from "@angular/common";
         </div>
       </div>
     </section>
+
+    <!-- Floating Action Buttons - Always Visible -->
+    <div class="fixed bottom-6 sm:bottom-8 right-4 sm:right-6 lg:right-8 z-40 flex flex-col gap-3 sm:gap-4">
+      <!-- Donate FAB -->
+      <a
+        routerLink="/donate"
+        class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 lg:w-18 lg:h-18 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full shadow-2xl hover:shadow-pink-500/50 transform hover:scale-110 transition-all duration-300 animate-pulse"
+        title="Make a Donation"
+      >
+        <span class="text-white text-2xl sm:text-3xl group-hover:scale-110 transition-transform duration-300">💖</span>
+      </a>
+
+      <!-- Contact FAB -->
+      <a
+        routerLink="/contact"
+        class="group flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/90 backdrop-blur-sm border-2 border-pink-300 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300"
+        title="Contact Us"
+      >
+        <span class="text-pink-600 text-xl sm:text-2xl group-hover:scale-110 transition-transform duration-300">📧</span>
+      </a>
+    </div>
   `,
 })
 export class HomeComponent {

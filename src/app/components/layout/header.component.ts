@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit, OnDestroy, HostListener } from "@angular/core";
 import { RouterLink, RouterLinkActive } from "@angular/router";
 import { CommonModule } from "@angular/common";
 
@@ -8,7 +8,10 @@ import { CommonModule } from "@angular/common";
   imports: [CommonModule, RouterLink, RouterLinkActive],
   template: `
     <header
-      class="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-pink-200 shadow-sm"
+      [class]="
+        'fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-pink-200 shadow-sm transition-transform duration-300 ease-in-out ' +
+        (isHeaderVisible ? 'translate-y-0' : '-translate-y-full')
+      "
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 lg:h-20">
@@ -236,8 +239,50 @@ import { CommonModule } from "@angular/common";
     </header>
   `,
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit, OnDestroy {
   isMobileMenuOpen = false;
+  isHeaderVisible = true;
+  lastScrollTop = 0;
+  scrollThreshold = 5; // Minimum scroll distance before hiding/showing
+
+  ngOnInit() {
+    // Initial scroll position
+    this.lastScrollTop =
+      window.pageYOffset || document.documentElement.scrollTop;
+  }
+
+  ngOnDestroy() {
+    // Cleanup if needed
+  }
+
+  @HostListener("window:scroll", ["$event"])
+  onWindowScroll() {
+    const currentScrollTop =
+      window.pageYOffset || document.documentElement.scrollTop;
+
+    // Always show header when at the top of the page
+    if (currentScrollTop <= 50) {
+      this.isHeaderVisible = true;
+      this.lastScrollTop = currentScrollTop;
+      return;
+    }
+
+    // Check scroll direction and distance
+    const scrollDifference = Math.abs(currentScrollTop - this.lastScrollTop);
+
+    if (scrollDifference > this.scrollThreshold) {
+      if (currentScrollTop > this.lastScrollTop) {
+        // Scrolling down - hide header
+        this.isHeaderVisible = false;
+        this.closeMobileMenu(); // Close mobile menu when hiding
+      } else {
+        // Scrolling up - show header
+        this.isHeaderVisible = true;
+      }
+
+      this.lastScrollTop = currentScrollTop;
+    }
+  }
 
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
