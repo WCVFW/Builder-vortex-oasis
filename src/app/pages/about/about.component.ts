@@ -170,7 +170,9 @@ import { RouterLink } from "@angular/router";
             <div
               class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 lg:mb-8 shadow-lg shadow-pink-200 group-hover:scale-110 transition-transform duration-300"
             >
-              <span class="text-white text-2xl sm:text-3xl lg:text-4xl"
+              <span
+                class="text-white text-2xl sm:text-3xl lg:text-4xl"
+                style="color: white !important; filter: brightness(1.5);"
                 >💖</span
               >
             </div>
@@ -323,7 +325,10 @@ import { RouterLink } from "@angular/router";
             routerLink="/donate"
             class="btn-responsive bg-white text-pink-600 hover:bg-pink-50 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
-            💖 Donate Now
+            <span style="color: white !important; filter: brightness(1.5);"
+              >💖</span
+            >
+            Donate Now
           </a>
           <a
             routerLink="/contact"

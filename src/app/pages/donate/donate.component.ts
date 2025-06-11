@@ -64,7 +64,11 @@ import { CommonModule } from "@angular/common";
             <div
               class="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 lg:mb-6 shadow-lg shadow-pink-200 animate-pink-glow"
             >
-              <span class="text-white text-lg sm:text-xl lg:text-2xl">💖</span>
+              <span
+                class="text-white text-lg sm:text-xl lg:text-2xl"
+                style="color: white !important; filter: brightness(1.5);"
+                >💖</span
+              >
             </div>
             <h3
               class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-2 sm:mb-3"
@@ -297,7 +301,11 @@ import { CommonModule } from "@angular/common";
               type="submit"
               class="w-full flex items-center justify-center px-6 sm:px-8 py-4 sm:py-5 text-base sm:text-lg lg:text-xl font-bold text-white bg-gradient-to-r from-pink-500 to-pink-400 rounded-xl hover:from-pink-600 hover:to-pink-500 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl animate-pink-glow"
             >
-              <span class="mr-2 sm:mr-3">💖</span>
+              <span
+                class="mr-2 sm:mr-3"
+                style="color: white !important; filter: brightness(1.5);"
+                >💖</span
+              >
               Donate {{ getDonationAmount() | currency }}
               {{ donationType === "monthly" ? "/month" : "" }}
             </button>
@@ -366,7 +374,11 @@ import { CommonModule } from "@angular/common";
         <div
           class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg shadow-pink-200 animate-pink-glow"
         >
-          <span class="text-white text-2xl sm:text-3xl lg:text-4xl">💖</span>
+          <span
+            class="text-white text-2xl sm:text-3xl lg:text-4xl"
+            style="color: white !important; filter: brightness(1.5);"
+            >💖</span
+          >
         </div>
         <h3
           class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6"

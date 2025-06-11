@@ -361,7 +361,10 @@ import { RouterLink } from "@angular/router";
             routerLink="/donate"
             class="inline-flex items-center justify-center px-6 py-3 text-base font-medium bg-white text-pink-600 rounded-lg hover:bg-pink-50 transform hover:scale-105 transition-all duration-200 shadow-lg"
           >
-            💖 Make a Donation
+            <span style="color: white !important; filter: brightness(1.5);"
+              >💖</span
+            >
+            Make a Donation
           </a>
           <a
             routerLink="/contact"

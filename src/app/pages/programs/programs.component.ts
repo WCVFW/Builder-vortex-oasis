@@ -75,6 +75,11 @@ import { RouterLink } from "@angular/router";
             </p>
             <ul class="text-gray-600 space-y-2 sm:space-y-3 mb-6 sm:mb-8">
               <li class="flex items-center text-sm sm:text-base">
+                <span
+                  class="mr-2 sm:mr-3"
+                  style="color: white !important; filter: brightness(1.5);"
+                  >💖</span
+                >
                 <span class="text-pink-500 mr-2 sm:mr-3">💖</span> Digital
                 literacy programs
               </li>
@@ -309,7 +314,10 @@ import { RouterLink } from "@angular/router";
                 routerLink="/contact"
                 class="btn-responsive text-white bg-gradient-to-r from-pink-500 to-pink-400 hover:from-pink-600 hover:to-pink-500 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                💖 Apply Now
+                <span style="color: white !important; filter: brightness(1.5);"
+                  >💖</span
+                >
+                Apply Now
               </a>
             </div>
             <div class="order-1 lg:order-2 relative">
@@ -425,7 +433,10 @@ import { RouterLink } from "@angular/router";
                 routerLink="/contact"
                 class="btn-responsive text-white bg-gradient-to-r from-pink-500 to-pink-400 hover:from-pink-600 hover:to-pink-500 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                💖 Get Started
+                <span style="color: white !important; filter: brightness(1.5);"
+                  >💖</span
+                >
+                Get Started
               </a>
             </div>
           </div>
@@ -456,7 +467,10 @@ import { RouterLink } from "@angular/router";
             routerLink="/contact"
             class="btn-responsive bg-white text-pink-600 hover:bg-pink-50 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
-            💖 Apply Now
+            <span style="color: white !important; filter: brightness(1.5);"
+              >💖</span
+            >
+            Apply Now
           </a>
           <a
             routerLink="/donate"
