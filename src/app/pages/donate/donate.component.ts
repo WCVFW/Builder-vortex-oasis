@@ -64,11 +64,7 @@ import { CommonModule } from "@angular/common";
             <div
               class="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 lg:mb-6 shadow-lg shadow-pink-200 animate-pink-glow"
             >
-              <span
-                class="text-white text-lg sm:text-xl lg:text-2xl"
-                style="color: white !important; filter: brightness(1.5);"
-                >💖</span
-              >
+              <span class="text-white text-lg sm:text-xl lg:text-2xl">💖</span>
             </div>
             <h3
               class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-2 sm:mb-3"
@@ -86,235 +82,114 @@ import { CommonModule } from "@angular/common";
     </section>
 
     <!-- Donation Form -->
-    <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-pink-50">
-      <div class="max-w-4xl mx-auto">
-        <div
-          class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 lg:p-12 border border-pink-100"
-        >
-          <div class="text-center mb-8 sm:mb-10 lg:mb-12">
-            <h2
-              class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6"
-            >
-              Choose Your Donation Amount
-            </h2>
-            <p class="text-sm sm:text-base lg:text-lg text-gray-600">
-              Select an amount or enter a custom donation below.
-            </p>
-          </div>
-
-          <form (ngSubmit)="handleDonate()" class="space-y-6 sm:space-y-8">
-            <!-- Donation Type -->
-            <div>
-              <label
-                class="block text-sm sm:text-base lg:text-lg font-medium text-gray-700 mb-3 sm:mb-4"
-                >Donation Type</label
-              >
-              <div class="grid grid-cols-2 gap-3 sm:gap-4">
-                <label class="relative cursor-pointer">
-                  <input
-                    type="radio"
-                    name="donationType"
-                    value="one-time"
-                    [(ngModel)]="donationType"
-                    class="sr-only"
-                  />
-                  <div
-                    [class]="
-                      donationType === 'one-time'
-                        ? 'border-pink-500 bg-pink-50 text-pink-700'
-                        : 'border-gray-300 text-gray-700 hover:border-pink-300'
-                    "
-                    class="border-2 rounded-xl p-4 sm:p-6 text-center transition-all duration-200"
-                  >
-                    <span class="text-2xl sm:text-3xl mb-2 sm:mb-3 block"
-                      >🎁</span
-                    >
-                    <span class="text-sm sm:text-base lg:text-lg font-semibold"
-                      >One-time</span
-                    >
-                  </div>
-                </label>
-                <label class="relative cursor-pointer">
-                  <input
-                    type="radio"
-                    name="donationType"
-                    value="monthly"
-                    [(ngModel)]="donationType"
-                    class="sr-only"
-                  />
-                  <div
-                    [class]="
-                      donationType === 'monthly'
-                        ? 'border-pink-500 bg-pink-50 text-pink-700'
-                        : 'border-gray-300 text-gray-700 hover:border-pink-300'
-                    "
-                    class="border-2 rounded-xl p-4 sm:p-6 text-center transition-all duration-200"
-                  >
-                    <span
-                      class="text-2xl sm:text-3xl mb-2 sm:mb-3 block"
-                      style="color: white !important; filter: brightness(1.5);"
-                      >💖</span
-                    >
-                    <span class="text-sm sm:text-base lg:text-lg font-semibold"
-                      >Monthly</span
-                    >
-                  </div>
-                </label>
-              </div>
-            </div>
-
-            <!-- Amount Selection -->
-            <div>
-              <label
-                class="block text-sm sm:text-base lg:text-lg font-medium text-gray-700 mb-3 sm:mb-4"
-                >Amount</label
-              >
-              <div
-                class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-4 sm:mb-6"
-              >
-                <label
-                  *ngFor="let amount of presetAmounts"
-                  class="relative cursor-pointer"
-                >
-                  <input
-                    type="radio"
-                    [value]="amount"
-                    name="amount"
-                    [(ngModel)]="selectedAmount"
-                    class="sr-only"
-                  />
-                  <div
-                    [class]="
-                      selectedAmount === amount
-                        ? 'border-pink-500 bg-pink-50 text-pink-700'
-                        : 'border-gray-300 text-gray-700 hover:border-pink-300'
-                    "
-                    class="border-2 rounded-lg p-3 sm:p-4 text-center transition-all duration-200"
-                  >
-                    <span class="text-sm sm:text-base lg:text-lg font-bold"
-                      >&#36;{{ amount }}</span
-                    >
-                  </div>
-                </label>
-              </div>
-              <div class="relative">
-                <label
-                  for="customAmount"
-                  class="block text-sm sm:text-base font-medium text-gray-600 mb-2"
-                  >Or enter custom amount:</label
-                >
-                <div class="relative">
-                  <span
-                    class="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm sm:text-base"
-                    >&#36;</span
-                  >
-                  <input
-                    type="number"
-                    id="customAmount"
-                    [(ngModel)]="customAmount"
-                    name="customAmount"
-                    (input)="onCustomAmountChange()"
-                    placeholder="Enter amount"
-                    class="w-full pl-8 sm:pl-10 pr-3 sm:pr-4 py-3 sm:py-4 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-colors duration-200"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <!-- Donor Information -->
-            <div class="space-y-4 sm:space-y-6">
-              <h3
-                class="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900"
-              >
-                Donor Information
-              </h3>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                <div>
-                  <label
-                    for="firstName"
-                    class="block text-sm sm:text-base font-medium text-gray-700 mb-1 sm:mb-2"
-                    >First Name</label
-                  >
-                  <input
-                    type="text"
-                    id="firstName"
-                    [(ngModel)]="donorInfo.firstName"
-                    name="firstName"
-                    required
-                    class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-colors duration-200"
-                  />
-                </div>
-                <div>
-                  <label
-                    for="lastName"
-                    class="block text-sm sm:text-base font-medium text-gray-700 mb-1 sm:mb-2"
-                    >Last Name</label
-                  >
-                  <input
-                    type="text"
-                    id="lastName"
-                    [(ngModel)]="donorInfo.lastName"
-                    name="lastName"
-                    required
-                    class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-colors duration-200"
-                  />
-                </div>
-              </div>
-              <div>
-                <label
-                  for="email"
-                  class="block text-sm sm:text-base font-medium text-gray-700 mb-1 sm:mb-2"
-                  >Email Address</label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  [(ngModel)]="donorInfo.email"
-                  name="email"
-                  required
-                  class="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-colors duration-200"
-                />
-              </div>
-            </div>
-
-            <!-- Security Notice -->
-            <div
-              class="bg-green-50 border border-green-200 rounded-xl p-4 sm:p-6"
-            >
-              <div class="flex items-start">
-                <span class="text-green-600 mr-2 sm:mr-3 text-lg sm:text-xl"
-                  >🔒</span
-                >
-                <div>
-                  <span
-                    class="text-sm sm:text-base text-green-800 font-semibold"
-                    >Secure Payment</span
-                  >
-                  <p class="text-xs sm:text-sm text-green-700 mt-1">
-                    Your payment information is encrypted and secure. We never
-                    store your payment details.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Donate Button -->
-            <button
-              type="submit"
-              class="w-full flex items-center justify-center px-6 sm:px-8 py-4 sm:py-5 text-base sm:text-lg lg:text-xl font-bold text-white bg-gradient-to-r from-pink-500 to-pink-400 rounded-xl hover:from-pink-600 hover:to-pink-500 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl animate-pink-glow"
-            >
-              <span
-                class="mr-2 sm:mr-3"
-                style="color: white !important; filter: brightness(1.5);"
-                >💖</span
-              >
-              Donate {{ getDonationAmount() | currency }}
-              {{ donationType === "monthly" ? "/month" : "" }}
-            </button>
-          </form>
-        </div>
+<section class="py-8 sm:py-10 lg:py-12 px-4 sm:px-6 lg:px-8 bg-pink-50">
+  <div class="max-w-2xl mx-auto">
+    <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 lg:p-8 border border-pink-100">
+      <div class="text-center mb-6 sm:mb-8 lg:mb-10">
+        <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
+          Choose Your Donation Amount
+        </h2>
+        <p class="text-sm sm:text-base text-gray-600">
+          Select an amount or enter a custom donation below.
+        </p>
       </div>
-    </section>
+
+      <form (ngSubmit)="handleDonate()" class="space-y-5 sm:space-y-6">
+        <!-- Donation Type -->
+        <div>
+          <label class="block text-sm sm:text-base font-medium text-gray-700 mb-2">Donation Type</label>
+          <div class="grid grid-cols-2 gap-2">
+            <label class="relative cursor-pointer">
+              <input type="radio" name="donationType" value="one-time" [(ngModel)]="donationType" class="sr-only" />
+              <div [class]="donationType === 'one-time' ? 'border-pink-500 bg-pink-50 text-pink-700' : 'border-gray-300 text-gray-700 hover:border-pink-300'"
+                   class="border-2 rounded-xl p-3 text-center transition-all duration-200">
+                <span class="text-xl mb-1 block">🎁</span>
+                <span class="text-sm font-semibold">One-time</span>
+              </div>
+            </label>
+            <label class="relative cursor-pointer">
+              <input type="radio" name="donationType" value="monthly" [(ngModel)]="donationType" class="sr-only" />
+              <div [class]="donationType === 'monthly' ? 'border-pink-500 bg-pink-50 text-pink-700' : 'border-gray-300 text-gray-700 hover:border-pink-300'"
+                   class="border-2 rounded-xl p-3 text-center transition-all duration-200">
+                <span class="text-xl mb-1 block">📅</span>
+                <span class="text-sm font-semibold">Monthly</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Amount Selection -->
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Amount</label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+            <label *ngFor="let amount of presetAmounts" class="relative cursor-pointer">
+              <input type="radio" [value]="amount" name="amount" [(ngModel)]="selectedAmount" class="sr-only" />
+              <div [class]="selectedAmount === amount ? 'border-pink-500 bg-pink-50 text-pink-700' : 'border-gray-300 text-gray-700 hover:border-pink-300'"
+                   class="border-2 rounded-lg p-2 text-center transition-all duration-200">
+                <span class="text-sm font-bold">₹{{ amount }}</span>
+              </div>
+            </label>
+          </div>
+          <div class="relative">
+            <label for="customAmount" class="block text-sm font-medium text-gray-600 mb-1">
+              Or enter custom amount:
+            </label>
+            <div class="relative">
+              <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">₹</span>
+              <input type="number" id="customAmount" [(ngModel)]="customAmount" name="customAmount" (input)="onCustomAmountChange()"
+                     placeholder="Enter amount"
+                     class="w-full pl-7 pr-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-colors duration-200" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Donor Information -->
+        <div class="space-y-4">
+          <h3 class="text-base sm:text-lg font-semibold text-gray-900">Donor Information</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+              <input type="text" id="firstName" [(ngModel)]="donorInfo.firstName" name="firstName" required
+                     class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition" />
+            </div>
+            <div>
+              <label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+              <input type="text" id="lastName" [(ngModel)]="donorInfo.lastName" name="lastName" required
+                     class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition" />
+            </div>
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+            <input type="email" id="email" [(ngModel)]="donorInfo.email" name="email" required
+                   class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition" />
+          </div>
+        </div>
+
+        <!-- Security Notice -->
+        <div class="bg-green-50 border border-green-200 rounded-xl p-4">
+          <div class="flex items-start">
+            <span class="text-green-600 mr-2 text-lg">🔒</span>
+            <div>
+              <span class="text-sm text-green-800 font-semibold">Secure Payment</span>
+              <p class="text-xs text-green-700 mt-1">
+                Your payment information is encrypted and secure. We never store your payment details.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Donate Button -->
+        <button type="submit"
+                class="w-full flex items-center justify-center px-5 py-3 text-sm sm:text-base font-bold text-white bg-gradient-to-r from-pink-500 to-pink-400 rounded-xl hover:from-pink-600 hover:to-pink-500 transform hover:scale-105 transition shadow-lg hover:shadow-xl">
+          <span class="mr-2">🌱</span>
+          Donate {{ getDonationAmount() | currency:'INR':'symbol':'1.0-0' }}
+          {{ donationType === 'monthly' ? '/month' : '' }}
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
 
     <!-- Why Donate -->
     <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">
@@ -376,11 +251,7 @@ import { CommonModule } from "@angular/common";
         <div
           class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg shadow-pink-200 animate-pink-glow"
         >
-          <span
-            class="text-white text-2xl sm:text-3xl lg:text-4xl"
-            style="color: white !important; filter: brightness(1.5);"
-            >💖</span
-          >
+          <span class="text-white text-2xl sm:text-3xl lg:text-4xl">💖</span>
         </div>
         <h3
           class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6"
