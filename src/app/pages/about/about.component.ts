@@ -8,185 +8,102 @@ import { RouterLink } from "@angular/router";
   template: `
     <!-- Hero Section -->
     <section
-      class="section-spacing bg-gradient-to-br from-pink-50 via-white to-rose-50"
+      class="py-16 px-8 bg-gradient-to-br from-pink-50 via-white to-rose-50"
     >
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center max-w-4xl mx-auto">
-          <h1
-            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-4 sm:mb-6 lg:mb-8"
-          >
-            About
-            <span
-              class="block sm:inline bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 bg-clip-text text-transparent"
-              >Women's Foundation</span
-            >
-          </h1>
-          <p
-            class="text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-600 leading-relaxed"
-          >
-            For over a decade, we've been dedicated to creating opportunities,
-            breaking barriers, and empowering women to achieve their dreams and
-            transform their communities.
-          </p>
-        </div>
-      </div>
+  <div class="max-w-6xl mx-auto pt-10">
+  <div class="text-center max-w-4xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+      About
+      <span
+        class="bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 bg-clip-text text-transparent"
+        >Women's Foundation</span
+      >
+    </h1>
+    <p class="text-xl text-gray-600 mb-8">
+      For over a decade, we've been dedicated to creating opportunities,
+      breaking barriers, and empowering women to achieve their dreams and
+      transform their communities.
+    </p>
+  </div>
+</div>
+
     </section>
 
     <!-- Our Story -->
-    <section class="section-spacing bg-white">
-      <div class="max-w-7xl mx-auto">
-        <div
-          class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center"
-        >
-          <div class="order-2 lg:order-1">
-            <h2
-              class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 lg:mb-8"
-            >
+    <section class="py-16 px-8 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Our Story
             </h2>
-            <div class="space-y-4 sm:space-y-6">
-              <p
-                class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed"
-              >
-                Founded in 2013, the Women's Foundation began with a simple yet
-                powerful vision: every woman deserves the opportunity to reach
-                her full potential. What started as a small grassroots
-                initiative has grown into a global movement.
-              </p>
-              <p
-                class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed"
-              >
-                Our founders, a group of passionate advocates, recognized that
-                systemic barriers were preventing countless women from accessing
-                education, career opportunities, and leadership roles. They set
-                out to change that narrative.
-              </p>
-              <p
-                class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed"
-              >
-                Today, we operate in 25 countries, have launched over 50
-                programs, and have directly impacted the lives of more than
-                10,000 women worldwide.
-              </p>
-            </div>
-            <div class="mt-6 sm:mt-8">
-              <a
-                routerLink="/impact"
-                class="btn-responsive text-white bg-gradient-to-r from-pink-500 to-pink-400 hover:from-pink-600 hover:to-pink-500 transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                💖 See Our Impact
-              </a>
-            </div>
-          </div>
-          <div class="order-1 lg:order-2 relative">
-            <div
-              class="relative z-10 rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl border border-pink-100 transform hover:scale-105 transition-transform duration-300"
+            <p class="text-gray-600 mb-6">
+              In the heart of Chennai, Tamil Nadu, a movement quietly began in 2016, driven by a fundamental belief: every woman deserves a voice. This seed, nurtured by the passion of media professional Mr. Gunalan Lavanyan and his resilient and compassionate wife, Mrs. Oorvasi Gunalan, grew into the We Can Voice for Women Foundation—a beacon of empowerment, equity, and hope.
+            </p>
+            <p class="text-gray-600 mb-6">
+              Formally established in 2019, the Foundation emerged as a grassroots NGO with a bold mission: to dismantle the systemic barriers faced by women in India, particularly those from marginalized and underserved communities. This mission was not about charity; it was about transformation—transformation through education, healthcare, economic opportunity, and advocacy.
+            </p>
+            <p class="text-gray-600 mb-8">
+              Under the banners of Women Enlightenment, Women Enhealthment, and Women Empowerment, the Foundation launched holistic programs targeting the most pressing needs of Indian women. These initiatives promoted literacy among rural girls, raised awareness about menstrual health in slum communities, offered vocational training to unemployed women, and advocated for survivors of domestic violence, effectively becoming a bridge between potential and possibility.
+            </p>
+            <a
+              routerLink="/impact"
+              class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-pink-500 to-pink-400 rounded-lg hover:from-pink-600 hover:to-pink-500 transform hover:scale-105 transition-all duration-200 shadow-lg"
             >
-              <img
-                src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Women working together"
-                class="w-full h-64 sm:h-80 lg:h-96 xl:h-[28rem] object-cover"
-              />
-            </div>
-            <!-- Floating decorative elements -->
-            <div
-              class="absolute -top-4 -left-4 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-pink-400 to-rose-400 rounded-full opacity-20 animate-pulse"
-            ></div>
-            <div
-              class="absolute -bottom-4 -right-4 w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-gradient-to-r from-rose-400 to-pink-300 rounded-full opacity-20 animate-pulse"
-              style="animation-delay: 1s;"
-            ></div>
+              💖 See Our Impact
+            </a>
+          </div>
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Women working together"
+              class="w-full h-96 object-cover rounded-lg shadow-lg border border-pink-100"
+            />
           </div>
         </div>
       </div>
     </section>
 
     <!-- Mission, Vision, Values -->
-    <section class="section-spacing bg-pink-50">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-10 sm:mb-12 lg:mb-16">
-          <h2
-            class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 lg:mb-6"
-          >
-            Our Foundation
-          </h2>
-          <p
-            class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto"
-          >
-            The core principles that guide everything we do and shape our vision
-            for the future.
-          </p>
-        </div>
-
-        <div class="grid-responsive-3">
+    <section class="py-16 px-8 bg-pink-50">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Mission -->
-          <div class="text-center group">
+          <div class="text-center">
             <div
-              class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 lg:mb-8 shadow-lg shadow-pink-200 group-hover:scale-110 transition-transform duration-300"
+              class="w-16 h-16 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-pink-200"
             >
-              <span class="text-white text-2xl sm:text-3xl lg:text-4xl"
-                >🎯</span
-              >
+              <span class="text-white text-2xl">🎯</span>
             </div>
-            <h3
-              class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6"
-            >
-              Our Mission
-            </h3>
-            <p
-              class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed"
-            >
-              To empower women through education, support, and community
-              building, creating pathways to economic independence and
-              leadership opportunities.
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+            <p class="text-gray-600">
+              A society where every woman is educated, healthy, and empowered - free to make informed choices, live with dignity, and shape a future of equality and justice.
             </p>
           </div>
 
           <!-- Vision -->
-          <div class="text-center group">
+          <div class="text-center">
             <div
-              class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 lg:mb-8 shadow-lg shadow-pink-200 group-hover:scale-110 transition-transform duration-300"
+              class="w-16 h-16 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-pink-200"
             >
-              <span class="text-white text-2xl sm:text-3xl lg:text-4xl"
-                >👁</span
-              >
+              <span class="text-white text-2xl">👁</span>
             </div>
-            <h3
-              class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6"
-            >
-              Our Vision
-            </h3>
-            <p
-              class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed"
-            >
-              A world where every woman has equal access to opportunities, where
-              gender is never a barrier to success, and where women lead
-              positive change globally.
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+            <p class="text-gray-600">
+              To empower women and girls from marginalised communities by creating safe, inclusive, and opportunity-rich environments. Through education, healthcare, economic independence, and advocacy, we strive to dismantle systemic barriers and nurture leaders who uplift families, communities, and the nation.
             </p>
           </div>
 
           <!-- Values -->
-          <div class="text-center group">
+          <div class="text-center">
             <div
-              class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 lg:mb-8 shadow-lg shadow-pink-200 group-hover:scale-110 transition-transform duration-300"
+              class="w-16 h-16 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-pink-200"
             >
-              <span
-                class="text-white text-2xl sm:text-3xl lg:text-4xl"
-                style="color: white !important; filter: brightness(1.5);"
-                >💖</span
-              >
+              <span class="text-white text-2xl">💖</span>
             </div>
-            <h3
-              class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6"
-            >
-              Our Values
-            </h3>
-            <p
-              class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed"
-            >
-              Empowerment, equality, community, innovation, and sustainability
-              guide everything we do. We believe in the transformative power of
-              women.
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Values</h3>
+            <p class="text-gray-600">
+              Our core values demand fairness and equal access for all women. We empower them with the skills and confidence to make their own choices. We create inclusive spaces that embrace every voice and celebrate diversity. We act with integrity by being honest and responsible in our community efforts. With compassion, we support women empathetically and assertively drive collaboration for lasting change. We cultivate resilience to build strong and determined women.
             </p>
           </div>
         </div>
@@ -194,108 +111,87 @@ import { RouterLink } from "@angular/router";
     </section>
 
     <!-- Leadership Team -->
-    <section class="section-spacing bg-white">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-10 sm:mb-12 lg:mb-16">
-          <h2
-            class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 lg:mb-6"
-          >
+    <section class="py-16 px-8 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Meet Our
             <span
               class="bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 bg-clip-text text-transparent"
               >Leadership Team</span
             >
           </h2>
-          <p
-            class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto"
-          >
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
             Our diverse team of leaders brings decades of experience in
             advocacy, business, education, and community development.
           </p>
         </div>
 
-        <div class="grid-responsive-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div
-            class="card-responsive bg-white text-center border-pink-100 hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 group"
+            class="bg-white rounded-xl shadow-md p-6 text-center border border-pink-100 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
           >
-            <div class="relative mb-4 sm:mb-6">
-              <img
-                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                alt="Dr. Sarah Williams"
-                class="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full object-cover mx-auto border-4 border-pink-200 group-hover:border-pink-400 transition-colors duration-300"
-              />
-            </div>
-            <h3
-              class="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 mb-2"
-            >
-              Dr. Sarah Williams
+            <img
+              src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+              alt="Mr. Gunalan Lavanyan, Founder & Chairman"
+              class="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-pink-200"
+            />
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Mr. Gunalan Lavanyan, <br> Founder & Chairman
             </h3>
-            <p
-              class="text-pink-600 font-medium mb-3 sm:mb-4 text-sm sm:text-base"
-            >
-              CEO & Founder
-            </p>
-            <p
-              class="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed"
-            >
-              Former UN Women advocate with 20+ years experience in
-              international development and women's rights advocacy.
+            <p class="text-pink-600 font-medium mb-3">CEO & Founder</p>
+            <p class="text-gray-600 text-sm">
+              a passionate advocate for social justice. Since initiating the We Can Voice for Women movement in 2016, he has worked tirelessly to reshape public perceptions and attitudes toward women. His leadership combines creative communication, grassroots mobilisation, and strategic vision.
             </p>
           </div>
 
           <div
-            class="card-responsive bg-white text-center border-pink-100 hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 group"
+            class="bg-white rounded-xl shadow-md p-6 text-center border border-pink-100 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
           >
-            <div class="relative mb-4 sm:mb-6">
-              <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                alt="Maria Rodriguez"
-                class="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full object-cover mx-auto border-4 border-pink-200 group-hover:border-pink-400 transition-colors duration-300"
-              />
-            </div>
-            <h3
-              class="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 mb-2"
-            >
-              Maria Rodriguez
+            <img
+              src=""
+              alt="Mrs. Oorvasi Gunalan, Secretary & Treasurer"
+              class="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-pink-200"
+            />
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Mrs. Oorvasi Gunalan,<br> Secretary & Treasurer
             </h3>
-            <p
-              class="text-pink-600 font-medium mb-3 sm:mb-4 text-sm sm:text-base"
-            >
-              Director of Programs
-            </p>
-            <p
-              class="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed"
-            >
-              Education specialist who has designed and implemented programs
-              that have reached over 5,000 women across Latin America.
+            <p class="text-pink-600 font-medium mb-3">Director of Programs</p>
+            <p class="text-gray-600 text-sm">
+              With a strong academic background in mathematics and an unyielding passion for community welfare, Mrs. Oorvasi Gunalan exemplifies compassion and resilience. She has played a pivotal role in shaping the Foundation’s operations and outreach. Her dedication to counselling women, managing programs, and sustaining grassroots engagement makes her an invaluable force behind the organisation’s impact.
             </p>
           </div>
 
           <div
-            class="card-responsive bg-white text-center border-pink-100 hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 group"
+            class="bg-white rounded-xl shadow-md p-6 text-center border border-pink-100 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
           >
-            <div class="relative mb-4 sm:mb-6">
-              <img
-                src="https://images.unsplash.com/photo-1594736797933-d0d2110d2d73?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                alt="Jennifer Chen"
-                class="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full object-cover mx-auto border-4 border-pink-200 group-hover:border-pink-400 transition-colors duration-300"
-              />
-            </div>
-            <h3
-              class="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 mb-2"
-            >
-              Jennifer Chen
+            <img
+              src=""
+              alt="Mr. Deepak Radhakrishnan, Head - Advisory Board"
+              class="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-pink-200"
+            />
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Mr. Deepak Radhakrishnan,<br> Head - Advisory Board
             </h3>
-            <p
-              class="text-pink-600 font-medium mb-3 sm:mb-4 text-sm sm:text-base"
-            >
-              Head of Technology
+            <p class="text-pink-600 font-medium mb-3">Head of Technology</p>
+            <p class="text-gray-600 text-sm">
+              He is a seasoned professional, qualified as a Taxation Advocate and CPA (USA), with deep expertise in accounting and taxation. He is passionately committed to uplifting business standards in India, especially among underserved communities. With a visionary mindset, he focuses on nurturing entrepreneurs and empowering women to build sustainable ventures. Deepak believes in transforming potential into professionalism, one business at a time. His mission is to create a generation of confident professionals and change-makers across India.
             </p>
-            <p
-              class="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed"
-            >
-              Tech entrepreneur and former Silicon Valley executive, leading our
-              digital initiatives and online learning platforms.
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-md p-6 text-center border border-pink-100 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+          >
+            <img
+              src=""
+              alt="Prof Mr. A.Md.Abdulkadhar, Advisory Board"
+              class="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-pink-200"
+            />
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Prof Mr. A.Md.Abdulkadhar, Advisory Board
+            </h3>
+            <p class="text-pink-600 font-medium mb-3">Head of Technology</p>
+            <p class="text-gray-600 text-sm">
+              Professor A. Mohamed Abdul Kadhar is a distinguished educationist dedicated to the advancement of women. With a wealth of knowledge, he has authored a compelling array of articles and books that spotlight women winners, achievers, and entrepreneurs. Known for his inspiring and confident speaking style, he serves as a trusted consultant to a variety of educational institutions. His impactful work has been recognised with numerous prestigious awards. Currently, he is playing a pivotal role in shaping the We Can Voice for Women Foundation, offering valuable insights and expertise to empower women's voices and initiatives.
             </p>
           </div>
         </div>
@@ -304,35 +200,24 @@ import { RouterLink } from "@angular/router";
 
     <!-- Call to Action -->
     <section
-      class="section-spacing bg-gradient-to-r from-pink-500 to-pink-400 text-white"
+      class="py-16 px-8 bg-gradient-to-r from-pink-500 to-pink-400 text-white"
     >
-      <div class="max-w-4xl mx-auto text-center">
-        <h2
-          class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 lg:mb-8"
-        >
-          Join Our Mission
-        </h2>
-        <p
-          class="text-base sm:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 lg:mb-10 opacity-90 leading-relaxed"
-        >
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Join Our Mission</h2>
+        <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">
           Whether through volunteering, donating, or partnering with us, there
           are many ways to be part of our mission to empower women.
         </p>
-        <div
-          class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center max-w-lg mx-auto"
-        >
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             routerLink="/donate"
-            class="btn-responsive bg-white text-pink-600 hover:bg-pink-50 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            class="inline-flex items-center justify-center px-6 py-3 text-base font-medium bg-white text-pink-600 rounded-lg hover:bg-pink-50 transform hover:scale-105 transition-all duration-200 shadow-lg"
           >
-            <span style="color: white !important; filter: brightness(1.5);"
-              >💖</span
-            >
-            Donate Now
+            💖 Donate Now
           </a>
           <a
             routerLink="/contact"
-            class="btn-responsive border-2 border-white text-white hover:bg-white hover:text-pink-600 transition-all duration-200"
+            class="inline-flex items-center justify-center px-6 py-3 text-base font-medium border-2 border-white text-white rounded-lg hover:bg-white hover:text-pink-600 transition-all duration-200"
           >
             Contact Us
           </a>
@@ -341,4 +226,5 @@ import { RouterLink } from "@angular/router";
     </section>
   `,
 })
+
 export class AboutComponent {}
