@@ -50,7 +50,11 @@ import { CommonModule } from "@angular/common";
                 #gradientFallback
                 class="hidden w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full shadow-lg flex items-center justify-center transition-transform duration-200 hover:scale-110"
               >
-                <span class="text-white text-lg sm:text-xl">💖</span>
+                <span
+                  class="text-white text-lg sm:text-xl"
+                  style="color: white !important; filter: brightness(1.5);"
+                  >💖</span
+                >
               </div>
             </div>
 
@@ -128,7 +132,11 @@ import { CommonModule } from "@angular/common";
               routerLink="/donate"
               class="inline-flex items-center px-4 xl:px-6 py-2 xl:py-3 text-sm xl:text-base font-semibold text-white bg-gradient-to-r from-pink-500 to-pink-400 rounded-lg hover:from-pink-600 hover:to-pink-500 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl animate-pink-glow"
             >
-              <span class="mr-1 xl:mr-2">💖</span>
+              <span
+                class="mr-1 xl:mr-2"
+                style="color: white !important; filter: brightness(1.5);"
+                >💖</span
+              >
               Donate
             </a>
           </div>
@@ -230,7 +238,10 @@ import { CommonModule } from "@angular/common";
                 (click)="closeMobileMenu()"
                 class="block w-full text-center px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-pink-500 to-pink-400 rounded-lg hover:from-pink-600 hover:to-pink-500 transition-all duration-200 shadow-lg"
               >
-                💖 Donate Now
+                <span style="color: white !important; filter: brightness(1.5);"
+                  >💖</span
+                >
+                Donate Now
               </a>
             </div>
           </div>

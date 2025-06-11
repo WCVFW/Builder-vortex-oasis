@@ -20,7 +20,11 @@ import { CommonModule } from "@angular/common";
               <div
                 class="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-pink-500 to-pink-400 rounded-xl shadow-lg"
               >
-                <span class="text-white text-lg sm:text-xl">💖</span>
+                <span
+                  class="text-white text-lg sm:text-xl"
+                  style="color: white !important; filter: brightness(1.5);"
+                  >💖</span
+                >
               </div>
               <span
                 class="ml-2 sm:ml-3 text-lg sm:text-xl lg:text-2xl font-bold text-white"
@@ -237,7 +241,11 @@ import { CommonModule } from "@angular/common";
             >
               <div class="flex items-center text-xs sm:text-sm text-pink-400">
                 <span>Made with</span>
-                <span class="mx-1 text-pink-500 animate-pulse">💖</span>
+                <span
+                  class="mx-1 animate-pulse"
+                  style="color: white !important; filter: brightness(1.5);"
+                  >💖</span
+                >
                 <span>for women everywhere</span>
               </div>
               <div class="flex space-x-4 text-xs sm:text-sm">
