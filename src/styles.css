@@ -2,6 +2,169 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global responsive styles and sticky header support */
+@layer base {
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Account for sticky header */
+  }
+
+  /* Body responsive setup */
+  body {
+    @apply text-gray-900 bg-white leading-relaxed;
+    padding-top: 64px; /* Space for sticky header on mobile */
+  }
+
+  /* Desktop header spacing */
+  @screen lg {
+    body {
+      padding-top: 80px; /* Space for larger desktop header */
+    }
+  }
+
+  /* Responsive text sizing */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold leading-tight;
+  }
+
+  /* Mobile-first responsive containers */
+  .container-responsive {
+    @apply px-4 mx-auto;
+  }
+
+  @screen sm {
+    .container-responsive {
+      @apply px-6;
+    }
+  }
+
+  @screen lg {
+    .container-responsive {
+      @apply px-8;
+    }
+  }
+
+  @screen xl {
+    .container-responsive {
+      @apply max-w-7xl;
+    }
+  }
+}
+
+@layer components {
+  /* Responsive button styles */
+  .btn-responsive {
+    @apply px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-200;
+  }
+
+  @screen sm {
+    .btn-responsive {
+      @apply px-6 py-3 text-base;
+    }
+  }
+
+  @screen lg {
+    .btn-responsive {
+      @apply px-8 py-4 text-lg;
+    }
+  }
+
+  /* Responsive card components */
+  .card-responsive {
+    @apply p-4 rounded-lg shadow-md border;
+  }
+
+  @screen sm {
+    .card-responsive {
+      @apply p-6 rounded-xl;
+    }
+  }
+
+  @screen lg {
+    .card-responsive {
+      @apply p-8 rounded-2xl;
+    }
+  }
+
+  /* Responsive spacing utilities */
+  .section-spacing {
+    @apply py-12 px-4;
+  }
+
+  @screen sm {
+    .section-spacing {
+      @apply py-16 px-6;
+    }
+  }
+
+  @screen lg {
+    .section-spacing {
+      @apply py-20 px-8;
+    }
+  }
+
+  @screen xl {
+    .section-spacing {
+      @apply py-24;
+    }
+  }
+
+  /* Responsive grid layouts */
+  .grid-responsive-2 {
+    @apply grid grid-cols-1 gap-4;
+  }
+
+  @screen sm {
+    .grid-responsive-2 {
+      @apply grid-cols-2 gap-6;
+    }
+  }
+
+  @screen lg {
+    .grid-responsive-2 {
+      @apply gap-8;
+    }
+  }
+
+  .grid-responsive-3 {
+    @apply grid grid-cols-1 gap-4;
+  }
+
+  @screen md {
+    .grid-responsive-3 {
+      @apply grid-cols-2 gap-6;
+    }
+  }
+
+  @screen lg {
+    .grid-responsive-3 {
+      @apply grid-cols-3 gap-8;
+    }
+  }
+
+  .grid-responsive-4 {
+    @apply grid grid-cols-1 gap-4;
+  }
+
+  @screen sm {
+    .grid-responsive-4 {
+      @apply grid-cols-2 gap-6;
+    }
+  }
+
+  @screen lg {
+    .grid-responsive-4 {
+      @apply grid-cols-4 gap-8;
+    }
+  }
+}
+
 /* Global responsive styles with pink theme */
 * {
   margin: 0;
