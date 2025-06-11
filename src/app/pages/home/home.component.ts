@@ -10,7 +10,7 @@
       <!-- Hero Section -->
       <section
         class="relative py-12 sm:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center bg-gradient-to-br from-pink-50 via-white to-rose-50 overflow-hidden"
-        style="background-image: linear-gradient(rgba(255, 192, 203, 0.4), rgba(255, 182, 193, 0.6)), url('assets/images/hero-background.jpg'); background-size: cover; background-position: center; background-attachment: fixed;"
+        style="background-image: linear-gradient(rgba(108, 105, 106, 0.4), rgba(28, 26, 26, 0.6)), url('assets/images/hero-background.jpg'); background-size: cover; background-position: center; background-attachment: fixed;"
       >
         <!-- Floating background elements -->
         <div class="absolute inset-0 overflow-hidden pointer-events-none">
@@ -31,21 +31,19 @@
           <!-- Centered Content -->
           <div class="text-center">
             <h1
-              class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 sm:mb-6 lg:mb-8 text-white drop-shadow-lg"
-            >
-              Empowering
-              <span
-                class="block sm:inline bg-gradient-to-r from-pink-800 via-pink-400 to-purple-400 bg-clip-text text-transparent"
-                >Women</span
-              >
-              <span class="block sm:inline">to Change the World</span>
-            </h1>
+  class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight mb-6 text-white drop-shadow-lg whitespace-nowrap overflow-hidden text-ellipsis"
+>
+  Empowering
+  <span class="bg-gradient-to-r from-pink-800 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+    Women
+  </span>
+  to Change the World
+</h1>
+
             <p
               class="text-sm sm:text-base lg:text-lg xl:text-xl text-white mb-6 sm:mb-8 lg:mb-10 max-w-4xl mx-auto drop-shadow-md opacity-90 leading-relaxed"
             >
-              Join our mission to create opportunities, break barriers, and build
-              a more equitable future for women everywhere through education,
-              support, and community building.
+              When women seize employment and business opportunities, they not only transform their own lives but also uplift future generations. While education is vital, access to income opportunities is even more critical.
             </p>
 
             <!-- Expandable Content -->
@@ -56,14 +54,11 @@
               <p
                 class="text-white text-sm sm:text-base lg:text-lg leading-relaxed mb-4 opacity-90"
               >
-                Our comprehensive programs focus on three key areas:
-                <strong>Education & Skills Development</strong> - helping women
-                gain the knowledge and technical skills needed for today's
-                economy; <strong>Community Building</strong> - creating supportive
-                networks where women can connect, share experiences, and grow
-                together; and <strong>Leadership Training</strong> - developing
-                the next generation of women leaders who will drive positive
-                change in their communities.
+                The We Can Voice for Women Foundation is at the forefront of creating these life-changing prospects.
+
+Our mission is to empower 500 women from grassroots communities each year, enabling them to make a significant mark in the business world. To realize this vision, we are forging partnerships with government institutions and private companies to provide targeted vocational training for women. We are dedicated to identifying and uplifting women from underprivileged families across Tamil Nadu who are eagerly seeking employment, providing them with the skills they need to thrive.
+
+Moreover, we invite institutions, volunteers, and entrepreneurs who share our vision of igniting a business revolution among women in Tamil Nadu to join us by entering into a Memorandum of Understanding. Together, we can create a brighter, more equitable future for women and their communities.
               </p>
               <p
                 class="text-white text-sm sm:text-base lg:text-lg leading-relaxed opacity-90"
@@ -118,7 +113,7 @@
 
       <!-- Stats Section -->
       <section
-        class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-500/80 via-pink-400/80 to-rose-400/80"
+        class=" hidden py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-500/80 via-pink-400/80 to-rose-400/80"
       >
         <div class="max-w-7xl mx-auto">
           <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
