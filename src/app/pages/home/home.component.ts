@@ -43,18 +43,36 @@ import { CommonModule } from "@angular/common";
           <p
             class="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-white mb-8 sm:mb-10 lg:mb-12 max-w-4xl mx-auto drop-shadow-md opacity-90 leading-relaxed"
           >
-            Join our mission to create opportunities, break barriers, and
-            build a more equitable future for women everywhere through
-            education, support, and community building.
+            Join our mission to create opportunities, break barriers, and build
+            a more equitable future for women everywhere through education,
+            support, and community building.
           </p>
 
           <!-- Expandable Content -->
-          <div *ngIf="showMoreContent" class="mb-8 sm:mb-10 lg:mb-12 p-6 sm:p-8 lg:p-10 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 max-w-4xl mx-auto">
-            <p class="text-white text-base sm:text-lg lg:text-xl leading-relaxed mb-6 opacity-90">
-              Our comprehensive programs focus on three key areas: <strong>Education & Skills Development</strong> - helping women gain the knowledge and technical skills needed for today's economy; <strong>Community Building</strong> - creating supportive networks where women can connect, share experiences, and grow together; and <strong>Leadership Training</strong> - developing the next generation of women leaders who will drive positive change in their communities.
+          <div
+            *ngIf="showMoreContent"
+            class="mb-8 sm:mb-10 lg:mb-12 p-6 sm:p-8 lg:p-10 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 max-w-4xl mx-auto"
+          >
+            <p
+              class="text-white text-base sm:text-lg lg:text-xl leading-relaxed mb-6 opacity-90"
+            >
+              Our comprehensive programs focus on three key areas:
+              <strong>Education & Skills Development</strong> - helping women
+              gain the knowledge and technical skills needed for today's
+              economy; <strong>Community Building</strong> - creating supportive
+              networks where women can connect, share experiences, and grow
+              together; and <strong>Leadership Training</strong> - developing
+              the next generation of women leaders who will drive positive
+              change in their communities.
             </p>
-            <p class="text-white text-base sm:text-lg lg:text-xl leading-relaxed opacity-90">
-              Since our founding, we've reached over 10,000 women across 25 countries, created 3,847 jobs, and maintained a 95% success rate in our programs. Every donation directly supports these initiatives, providing scholarships, resources, and mentorship opportunities that transform lives.
+            <p
+              class="text-white text-base sm:text-lg lg:text-xl leading-relaxed opacity-90"
+            >
+              Since our founding, we've reached over 10,000 women across 25
+              countries, created 3,847 jobs, and maintained a 95% success rate
+              in our programs. Every donation directly supports these
+              initiatives, providing scholarships, resources, and mentorship
+              opportunities that transform lives.
             </p>
           </div>
 
@@ -66,63 +84,33 @@ import { CommonModule } from "@angular/common";
               class="group relative inline-flex items-center justify-center px-8 sm:px-10 lg:px-12 xl:px-16 py-4 sm:py-5 lg:py-6 xl:py-7 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-white bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 rounded-2xl hover:from-pink-600 hover:via-pink-500 hover:to-rose-500 transform hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-pink-500/50 border-2 border-pink-300 animate-pulse min-w-[250px] sm:min-w-[280px] lg:min-w-[320px]"
               style="animation-duration: 2s; animation-iteration-count: infinite;"
             >
-              <span class="absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-600 to-rose-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              <span
+                class="absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-600 to-rose-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></span>
               <span class="relative flex items-center justify-center w-full">
-                <span class="mr-3 sm:mr-4 text-xl sm:text-2xl lg:text-3xl">💖</span>
-                <span class="tracking-wide font-extrabold">MAKE A DONATION</span>
+                <span class="mr-3 sm:mr-4 text-xl sm:text-2xl lg:text-3xl"
+                  >💖</span
+                >
+                <span class="tracking-wide font-extrabold"
+                  >MAKE A DONATION</span
+                >
               </span>
-              <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-500 to-rose-400 blur-sm opacity-50 -z-10 group-hover:blur-md group-hover:opacity-75 transition-all duration-300"></div>
+              <div
+                class="absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-500 to-rose-400 blur-sm opacity-50 -z-10 group-hover:blur-md group-hover:opacity-75 transition-all duration-300"
+              ></div>
             </a>
             <button
               (click)="toggleMoreContent()"
               class="group inline-flex items-center justify-center px-8 sm:px-10 lg:px-12 xl:px-16 py-4 sm:py-5 lg:py-6 xl:py-7 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-white bg-white/30 backdrop-blur-md border-3 border-white/60 rounded-2xl hover:bg-white/40 hover:border-white/80 transform hover:scale-110 transition-all duration-300 shadow-2xl min-w-[220px] sm:min-w-[250px] lg:min-w-[280px]"
             >
-              <span class="tracking-wide font-extrabold">{{ showMoreContent ? 'SHOW LESS' : 'READ MORE' }}</span>
-              <span class="ml-3 sm:ml-4 text-xl sm:text-2xl lg:text-3xl group-hover:translate-x-1 transition-transform duration-300">{{ showMoreContent ? '↑' : '→' }}</span>
+              <span class="tracking-wide font-extrabold">{{
+                showMoreContent ? "SHOW LESS" : "READ MORE"
+              }}</span>
+              <span
+                class="ml-3 sm:ml-4 text-xl sm:text-2xl lg:text-3xl group-hover:translate-x-1 transition-transform duration-300"
+                >{{ showMoreContent ? "↑" : "→" }}</span
+              >
             </button>
-          </div>
-        </div>
-      </div>
-          class="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center max-w-2xl mx-auto"
-        >
-          <a
-            routerLink="/donate"
-            class="group relative inline-flex items-center justify-center px-8 sm:px-10 lg:px-12 xl:px-16 py-4 sm:py-5 lg:py-6 xl:py-7 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold bg-white text-pink-600 rounded-2xl hover:bg-pink-50 transform hover:scale-110 transition-all duration-300 shadow-2xl border-2 border-white/50 animate-bounce min-w-[200px] sm:min-w-[250px] lg:min-w-[300px]"
-          >
-            <span class="absolute inset-0 rounded-2xl bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-2xl"></span>
-            <span class="relative flex items-center justify-center w-full">
-              <span class="mr-3 sm:mr-4 text-xl sm:text-2xl lg:text-3xl">💖</span>
-              <span class="tracking-wide font-extrabold">DONATE NOW</span>
-            </span>
-            <div class="absolute inset-0 rounded-2xl bg-white blur-sm opacity-50 -z-10 group-hover:blur-md group-hover:opacity-75 transition-all duration-300"></div>
-          </a>
-          <a
-            routerLink="/contact"
-            class="group inline-flex items-center justify-center px-8 sm:px-10 lg:px-12 xl:px-16 py-4 sm:py-5 lg:py-6 xl:py-7 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold border-3 border-white text-white rounded-2xl hover:bg-white hover:text-pink-600 transition-all duration-300 backdrop-blur-sm bg-white/10 min-w-[200px] sm:min-w-[250px] lg:min-w-[300px]"
-          >
-            <span class="tracking-wide font-extrabold">GET INVOLVED</span>
-            <span class="ml-3 sm:ml-4 text-xl sm:text-2xl lg:text-3xl group-hover:translate-x-1 transition-transform duration-300">→</span>
-          </a>
-        </div>
-          <!-- Hero Image -->
-          <div class="order-1 lg:order-2 relative">
-            <div
-              class="relative z-10 bg-white/10 backdrop-blur-sm rounded-2xl shadow-2xl p-4 sm:p-6 lg:p-8 transform hover:scale-105 transition-transform duration-300 border border-white/20"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                alt="Empowered women"
-                class="w-full h-48 sm:h-64 lg:h-80 xl:h-96 object-cover rounded-xl opacity-70 hover:opacity-85 transition-opacity duration-300"
-              />
-            </div>
-            <!-- Floating decorative elements -->
-            <div
-              class="absolute -top-4 -left-4 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-pink-400 to-rose-400 rounded-full opacity-30 animate-pulse"
-            ></div>
-            <div
-              class="absolute -bottom-4 -right-4 w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-gradient-to-r from-rose-400 to-pink-300 rounded-full opacity-30 animate-pulse"
-              style="animation-delay: 1s"
-            ></div>
           </div>
         </div>
       </div>
@@ -289,33 +277,43 @@ import { CommonModule } from "@angular/common";
     >
       <div class="max-w-4xl mx-auto text-center">
         <h2
-          class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 lg:mb-6"
+          class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 lg:mb-8"
         >
           Ready to Make a Difference?
         </h2>
         <p
-          class="text-base sm:text-lg lg:text-xl mb-8 lg:mb-10 opacity-90 leading-relaxed"
+          class="text-base sm:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 lg:mb-10 opacity-90 leading-relaxed"
         >
           Join thousands of supporters who are helping us create a world where
           every woman has the opportunity to reach her full potential.
         </p>
         <div
-          class="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto"
+          class="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center max-w-2xl mx-auto"
         >
           <a
             routerLink="/donate"
-            class="group relative inline-flex items-center justify-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold bg-white text-pink-600 rounded-lg hover:bg-pink-50 transform hover:scale-105 transition-all duration-300 shadow-lg"
+            class="group relative inline-flex items-center justify-center px-8 sm:px-10 lg:px-12 xl:px-16 py-4 sm:py-5 lg:py-6 xl:py-7 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold bg-white text-pink-600 rounded-2xl hover:bg-pink-50 transform hover:scale-110 transition-all duration-300 shadow-2xl border-2 border-white/50 animate-bounce min-w-[200px] sm:min-w-[250px] lg:min-w-[300px]"
           >
-            <span class="mr-2 text-base sm:text-lg">💖</span>
-            <span class="tracking-wide">Donate Now</span>
+            <span
+              class="absolute inset-0 rounded-2xl bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-2xl"
+            ></span>
+            <span class="relative flex items-center justify-center w-full">
+              <span class="mr-3 sm:mr-4 text-xl sm:text-2xl lg:text-3xl"
+                >💖</span
+              >
+              <span class="tracking-wide font-extrabold">DONATE NOW</span>
+            </span>
+            <div
+              class="absolute inset-0 rounded-2xl bg-white blur-sm opacity-50 -z-10 group-hover:blur-md group-hover:opacity-75 transition-all duration-300"
+            ></div>
           </a>
           <a
             routerLink="/contact"
-            class="group inline-flex items-center justify-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold border-2 border-white text-white rounded-lg hover:bg-white hover:text-pink-600 transition-all duration-300"
+            class="group inline-flex items-center justify-center px-8 sm:px-10 lg:px-12 xl:px-16 py-4 sm:py-5 lg:py-6 xl:py-7 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold border-3 border-white text-white rounded-2xl hover:bg-white hover:text-pink-600 transition-all duration-300 backdrop-blur-sm bg-white/10 min-w-[200px] sm:min-w-[250px] lg:min-w-[300px]"
           >
-            <span class="tracking-wide">Get Involved</span>
+            <span class="tracking-wide font-extrabold">GET INVOLVED</span>
             <span
-              class="ml-2 text-base sm:text-lg group-hover:translate-x-1 transition-transform duration-300"
+              class="ml-3 sm:ml-4 text-xl sm:text-2xl lg:text-3xl group-hover:translate-x-1 transition-transform duration-300"
               >→</span
             >
           </a>
@@ -324,14 +322,19 @@ import { CommonModule } from "@angular/common";
     </section>
 
     <!-- Floating Action Buttons - Always Visible -->
-    <div class="fixed bottom-6 sm:bottom-8 right-4 sm:right-6 lg:right-8 z-40 flex flex-col gap-3 sm:gap-4">
+    <div
+      class="fixed bottom-6 sm:bottom-8 right-4 sm:right-6 lg:right-8 z-40 flex flex-col gap-3 sm:gap-4"
+    >
       <!-- Donate FAB -->
       <a
         routerLink="/donate"
         class="group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 lg:w-18 lg:h-18 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full shadow-2xl hover:shadow-pink-500/50 transform hover:scale-110 transition-all duration-300 animate-pulse"
         title="Make a Donation"
       >
-        <span class="text-white text-2xl sm:text-3xl group-hover:scale-110 transition-transform duration-300">💖</span>
+        <span
+          class="text-white text-2xl sm:text-3xl group-hover:scale-110 transition-transform duration-300"
+          >💖</span
+        >
       </a>
 
       <!-- Contact FAB -->
@@ -340,7 +343,10 @@ import { CommonModule } from "@angular/common";
         class="group flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/90 backdrop-blur-sm border-2 border-pink-300 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300"
         title="Contact Us"
       >
-        <span class="text-pink-600 text-xl sm:text-2xl group-hover:scale-110 transition-transform duration-300">📧</span>
+        <span
+          class="text-pink-600 text-xl sm:text-2xl group-hover:scale-110 transition-transform duration-300"
+          >📧</span
+        >
       </a>
     </div>
   `,
@@ -351,6 +357,7 @@ export class HomeComponent {
   toggleMoreContent() {
     this.showMoreContent = !this.showMoreContent;
   }
+
   stats = [
     { icon: "👥", number: "10,000+", label: "Women Empowered" },
     { icon: "🌍", number: "25", label: "Countries Reached" },
@@ -372,7 +379,7 @@ export class HomeComponent {
         "Building strong networks and support systems that connect women, foster mentorship, and create lasting bonds within our community.",
     },
     {
-      icon: "📊",
+      icon: "���",
       title: "Leadership Development",
       description:
         "Cultivating the next generation of women leaders through mentorship, training, and opportunities to make meaningful impact in their communities.",
