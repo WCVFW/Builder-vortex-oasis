@@ -27,59 +27,62 @@ import { CommonModule } from "@angular/common";
         ></div>
       </div>
 
-      <div class="max-w-7xl mx-auto relative z-10">
-        <div
-          class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center"
-        >
-          <!-- Content -->
-          <div class="order-2 lg:order-1 text-center lg:text-left">
-            <h1
-              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 lg:mb-8 text-white drop-shadow-lg"
+      <div class="max-w-5xl mx-auto relative z-10">
+        <!-- Centered Content -->
+        <div class="text-center">
+          <h1
+            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight mb-6 sm:mb-8 lg:mb-10 text-white drop-shadow-lg"
+          >
+            Empowering
+            <span
+              class="block sm:inline bg-gradient-to-r from-pink-200 via-pink-100 to-rose-100 bg-clip-text text-transparent"
+              >Women</span
             >
-              Empowering
-              <span
-                class="block sm:inline bg-gradient-to-r from-pink-200 via-pink-100 to-rose-100 bg-clip-text text-transparent"
-                >Women</span
-              >
-              <span class="block sm:inline">to Change the World</span>
-            </h1>
-            <p
-              class="text-base sm:text-lg lg:text-xl text-white mb-8 lg:mb-10 max-w-2xl mx-auto lg:mx-0 drop-shadow-md opacity-90"
-            >
-              Join our mission to create opportunities, break barriers, and
-              build a more equitable future for women everywhere through
-              education, support, and community building.
+            <span class="block sm:inline">to Change the World</span>
+          </h1>
+          <p
+            class="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-white mb-8 sm:mb-10 lg:mb-12 max-w-4xl mx-auto drop-shadow-md opacity-90 leading-relaxed"
+          >
+            Join our mission to create opportunities, break barriers, and
+            build a more equitable future for women everywhere through
+            education, support, and community building.
+          </p>
+
+          <!-- Expandable Content -->
+          <div *ngIf="showMoreContent" class="mb-8 sm:mb-10 lg:mb-12 p-6 sm:p-8 lg:p-10 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 max-w-4xl mx-auto">
+            <p class="text-white text-base sm:text-lg lg:text-xl leading-relaxed mb-6 opacity-90">
+              Our comprehensive programs focus on three key areas: <strong>Education & Skills Development</strong> - helping women gain the knowledge and technical skills needed for today's economy; <strong>Community Building</strong> - creating supportive networks where women can connect, share experiences, and grow together; and <strong>Leadership Training</strong> - developing the next generation of women leaders who will drive positive change in their communities.
             </p>
+            <p class="text-white text-base sm:text-lg lg:text-xl leading-relaxed opacity-90">
+              Since our founding, we've reached over 10,000 women across 25 countries, created 3,847 jobs, and maintained a 95% success rate in our programs. Every donation directly supports these initiatives, providing scholarships, resources, and mentorship opportunities that transform lives.
+            </p>
+          </div>
 
-            <!-- Expandable Content -->
-            <div
-              *ngIf="showMoreContent"
-              class="mb-8 lg:mb-10 p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20"
+          <div
+            class="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center max-w-3xl mx-auto"
+          >
+            <a
+              routerLink="/donate"
+              class="group relative inline-flex items-center justify-center px-8 sm:px-10 lg:px-12 xl:px-16 py-4 sm:py-5 lg:py-6 xl:py-7 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-white bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 rounded-2xl hover:from-pink-600 hover:via-pink-500 hover:to-rose-500 transform hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-pink-500/50 border-2 border-pink-300 animate-pulse min-w-[250px] sm:min-w-[280px] lg:min-w-[320px]"
+              style="animation-duration: 2s; animation-iteration-count: infinite;"
             >
-              <p
-                class="text-white text-sm sm:text-base lg:text-lg leading-relaxed mb-4 opacity-90"
-              >
-                Our comprehensive programs focus on three key areas:
-                <strong>Education & Skills Development</strong> - helping women
-                gain the knowledge and technical skills needed for today's
-                economy; <strong>Community Building</strong> - creating
-                supportive networks where women can connect, share experiences,
-                and grow together; and <strong>Leadership Training</strong> -
-                developing the next generation of women leaders who will drive
-                positive change in their communities.
-              </p>
-              <p
-                class="text-white text-sm sm:text-base lg:text-lg leading-relaxed opacity-90"
-              >
-                Since our founding, we've reached over 10,000 women across 25
-                countries, created 3,847 jobs, and maintained a 95% success rate
-                in our programs. Every donation directly supports these
-                initiatives, providing scholarships, resources, and mentorship
-                opportunities that transform lives.
-              </p>
-            </div>
-
-        <div
+              <span class="absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-600 to-rose-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              <span class="relative flex items-center justify-center w-full">
+                <span class="mr-3 sm:mr-4 text-xl sm:text-2xl lg:text-3xl">💖</span>
+                <span class="tracking-wide font-extrabold">MAKE A DONATION</span>
+              </span>
+              <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-500 to-rose-400 blur-sm opacity-50 -z-10 group-hover:blur-md group-hover:opacity-75 transition-all duration-300"></div>
+            </a>
+            <button
+              (click)="toggleMoreContent()"
+              class="group inline-flex items-center justify-center px-8 sm:px-10 lg:px-12 xl:px-16 py-4 sm:py-5 lg:py-6 xl:py-7 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-white bg-white/30 backdrop-blur-md border-3 border-white/60 rounded-2xl hover:bg-white/40 hover:border-white/80 transform hover:scale-110 transition-all duration-300 shadow-2xl min-w-[220px] sm:min-w-[250px] lg:min-w-[280px]"
+            >
+              <span class="tracking-wide font-extrabold">{{ showMoreContent ? 'SHOW LESS' : 'READ MORE' }}</span>
+              <span class="ml-3 sm:ml-4 text-xl sm:text-2xl lg:text-3xl group-hover:translate-x-1 transition-transform duration-300">{{ showMoreContent ? '↑' : '→' }}</span>
+            </button>
+          </div>
+        </div>
+      </div>
           class="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center max-w-2xl mx-auto"
         >
           <a
