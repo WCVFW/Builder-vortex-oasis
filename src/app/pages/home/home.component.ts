@@ -34,71 +34,92 @@ import { CommonModule } from "@angular/common";
           <!-- Content -->
           <div class="order-2 lg:order-1 text-center lg:text-left">
             <h1
-              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 lg:mb-8"
+              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 lg:mb-8 text-white drop-shadow-lg"
             >
               Empowering
               <span
-                class="block sm:inline bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 bg-clip-text text-transparent"
+                class="block sm:inline bg-gradient-to-r from-pink-200 via-pink-100 to-rose-100 bg-clip-text text-transparent"
                 >Women</span
               >
               <span class="block sm:inline">to Change the World</span>
             </h1>
             <p
-              class="text-base sm:text-lg lg:text-xl text-gray-600 mb-8 lg:mb-10 max-w-2xl mx-auto lg:mx-0"
+              class="text-base sm:text-lg lg:text-xl text-white mb-8 lg:mb-10 max-w-2xl mx-auto lg:mx-0 drop-shadow-md opacity-90"
             >
               Join our mission to create opportunities, break barriers, and
               build a more equitable future for women everywhere through
               education, support, and community building.
             </p>
+
+            <!-- Expandable Content -->
             <div
-              class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start"
+              *ngIf="showMoreContent"
+              class="mb-8 lg:mb-10 p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20"
+            >
+              <p
+                class="text-white text-sm sm:text-base lg:text-lg leading-relaxed mb-4 opacity-90"
+              >
+                Our comprehensive programs focus on three key areas:
+                <strong>Education & Skills Development</strong> - helping women
+                gain the knowledge and technical skills needed for today's
+                economy; <strong>Community Building</strong> - creating
+                supportive networks where women can connect, share experiences,
+                and grow together; and <strong>Leadership Training</strong> -
+                developing the next generation of women leaders who will drive
+                positive change in their communities.
+              </p>
+              <p
+                class="text-white text-sm sm:text-base lg:text-lg leading-relaxed opacity-90"
+              >
+                Since our founding, we've reached over 10,000 women across 25
+                countries, created 3,847 jobs, and maintained a 95% success rate
+                in our programs. Every donation directly supports these
+                initiatives, providing scholarships, resources, and mentorship
+                opportunities that transform lives.
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <a
                 routerLink="/donate"
-                class="group relative inline-flex items-center justify-center px-8 lg:px-12 py-4 lg:py-5 text-lg lg:text-xl font-bold text-white bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 rounded-2xl hover:from-pink-600 hover:via-pink-500 hover:to-rose-500 transform hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-pink-500/50 border-2 border-pink-300 animate-bounce"
-                style="animation-duration: 2s; animation-iteration-count: infinite;"
+                class="group relative inline-flex items-center justify-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold text-white bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 rounded-lg hover:from-pink-600 hover:via-pink-500 hover:to-rose-500 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-pink-500/50 border border-pink-300"
               >
-                <span
-                  class="absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-600 to-rose-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                ></span>
-                <span class="relative flex items-center">
-                  <span class="mr-3 text-xl">💖</span>
-                  <span class="tracking-wide">MAKE A DONATION</span>
-                </span>
-                <div
-                  class="absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-500 to-rose-400 blur-sm opacity-50 -z-10 group-hover:blur-md group-hover:opacity-75 transition-all duration-300"
-                ></div>
+                <span class="mr-2 text-base sm:text-lg">💖</span>
+                <span class="tracking-wide">Make a Donation</span>
               </a>
-              <a
-                routerLink="/programs"
-                class="group inline-flex items-center justify-center px-8 lg:px-12 py-4 lg:py-5 text-lg lg:text-xl font-bold text-pink-600 bg-white/90 backdrop-blur-sm border-3 border-pink-400 rounded-2xl hover:bg-pink-50 hover:border-pink-500 hover:text-pink-700 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl"
+              <button
+                (click)="toggleMoreContent()"
+                class="group inline-flex items-center justify-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold text-white bg-white/20 backdrop-blur-sm border-2 border-white/40 rounded-lg hover:bg-white/30 hover:border-white/60 transform hover:scale-105 transition-all duration-300 shadow-lg"
               >
-                <span class="tracking-wide">LEARN MORE</span>
+                <span class="tracking-wide">{{
+                  showMoreContent ? "Show Less" : "Read More"
+                }}</span>
                 <span
-                  class="ml-3 text-xl group-hover:translate-x-1 transition-transform duration-300"
-                  >→</span
+                  class="ml-2 text-base sm:text-lg group-hover:translate-x-1 transition-transform duration-300"
+                  >{{ showMoreContent ? "↑" : "→" }}</span
                 >
-              </a>
+              </button>
             </div>
           </div>
-
           <!-- Hero Image -->
           <div class="order-1 lg:order-2 relative">
             <div
-              class="relative z-10 bg-white rounded-2xl shadow-2xl p-4 sm:p-6 lg:p-8 transform hover:scale-105 transition-transform duration-300 border border-pink-100"
+              class="relative z-10 bg-white/10 backdrop-blur-sm rounded-2xl shadow-2xl p-4 sm:p-6 lg:p-8 transform hover:scale-105 transition-transform duration-300 border border-white/20"
             >
               <img
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                 alt="Empowered women"
-                class="w-full h-48 sm:h-64 lg:h-80 xl:h-96 object-cover rounded-xl"
+                class="w-full h-48 sm:h-64 lg:h-80 xl:h-96 object-cover rounded-xl opacity-70 hover:opacity-85 transition-opacity duration-300"
               />
             </div>
             <!-- Floating decorative elements -->
             <div
-              class="absolute -top-4 -left-4 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-pink-400 to-rose-400 rounded-full opacity-20 animate-pulse"
+              class="absolute -top-4 -left-4 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r from-pink-400 to-rose-400 rounded-full opacity-30 animate-pulse"
             ></div>
             <div
-              class="absolute -bottom-4 -right-4 w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-gradient-to-r from-rose-400 to-pink-300 rounded-full opacity-20 animate-pulse"
+              class="absolute -bottom-4 -right-4 w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-gradient-to-r from-rose-400 to-pink-300 rounded-full opacity-30 animate-pulse"
               style="animation-delay: 1s"
             ></div>
           </div>
@@ -107,7 +128,9 @@ import { CommonModule } from "@angular/common";
     </section>
 
     <!-- Stats Section -->
-    <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section
+      class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-500/80 via-pink-400/80 to-rose-400/80"
+    >
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           <div
@@ -124,12 +147,12 @@ import { CommonModule } from "@angular/common";
               >
             </div>
             <h3
-              class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-1 sm:mb-2"
+              class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-1 sm:mb-2 drop-shadow-lg"
             >
               {{ stat.number }}
             </h3>
             <p
-              class="text-xs sm:text-sm lg:text-base text-gray-600 leading-tight"
+              class="text-xs sm:text-sm lg:text-base text-white/90 leading-tight drop-shadow-md"
             >
               {{ stat.label }}
             </p>
@@ -276,30 +299,22 @@ import { CommonModule } from "@angular/common";
           every woman has the opportunity to reach her full potential.
         </p>
         <div
-          class="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto"
+          class="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto"
         >
           <a
             routerLink="/donate"
-            class="group relative inline-flex items-center justify-center px-8 lg:px-12 py-4 lg:py-5 text-lg lg:text-xl font-bold bg-white text-pink-600 rounded-2xl hover:bg-pink-50 transform hover:scale-110 transition-all duration-300 shadow-2xl border-2 border-white/50 animate-pulse"
+            class="group relative inline-flex items-center justify-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold bg-white text-pink-600 rounded-lg hover:bg-pink-50 transform hover:scale-105 transition-all duration-300 shadow-lg"
           >
-            <span
-              class="absolute inset-0 rounded-2xl bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-2xl"
-            ></span>
-            <span class="relative flex items-center">
-              <span class="mr-3 text-xl">💖</span>
-              <span class="tracking-wide">DONATE NOW</span>
-            </span>
-            <div
-              class="absolute inset-0 rounded-2xl bg-white blur-sm opacity-50 -z-10 group-hover:blur-md group-hover:opacity-75 transition-all duration-300"
-            ></div>
+            <span class="mr-2 text-base sm:text-lg">💖</span>
+            <span class="tracking-wide">Donate Now</span>
           </a>
           <a
             routerLink="/contact"
-            class="group inline-flex items-center justify-center px-8 lg:px-12 py-4 lg:py-5 text-lg lg:text-xl font-bold border-3 border-white text-white rounded-2xl hover:bg-white hover:text-pink-600 transition-all duration-300 backdrop-blur-sm bg-white/10"
+            class="group inline-flex items-center justify-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold border-2 border-white text-white rounded-lg hover:bg-white hover:text-pink-600 transition-all duration-300"
           >
-            <span class="tracking-wide">GET INVOLVED</span>
+            <span class="tracking-wide">Get Involved</span>
             <span
-              class="ml-3 text-xl group-hover:translate-x-1 transition-transform duration-300"
+              class="ml-2 text-base sm:text-lg group-hover:translate-x-1 transition-transform duration-300"
               >→</span
             >
           </a>
@@ -309,6 +324,11 @@ import { CommonModule } from "@angular/common";
   `,
 })
 export class HomeComponent {
+  showMoreContent = false;
+
+  toggleMoreContent() {
+    this.showMoreContent = !this.showMoreContent;
+  }
   stats = [
     { icon: "👥", number: "10,000+", label: "Women Empowered" },
     { icon: "🌍", number: "25", label: "Countries Reached" },
