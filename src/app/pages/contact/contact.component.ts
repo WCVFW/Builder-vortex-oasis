@@ -82,7 +82,7 @@ import { CommonModule } from "@angular/common";
                     Call Us
                   </h3>
                   <p class="text-sm sm:text-base lg:text-lg text-gray-600 mb-1">
-                    +1 (555) 123-4567
+                    +91-9840584463
                   </p>
                   <p class="text-xs sm:text-sm lg:text-base text-gray-500">
                     Monday - Friday, 9AM - 6PM EST
@@ -107,8 +107,7 @@ import { CommonModule } from "@angular/common";
                   <p
                     class="text-sm sm:text-base lg:text-lg text-gray-600 mb-1 leading-relaxed"
                   >
-                    123 Foundation Street<br />Hope City, HC 12345<br />United
-                    States
+                    Chennai<br />Tamil Nadu<br>
                   </p>
                   <p class="text-xs sm:text-sm lg:text-base text-gray-500">
                     By appointment only
@@ -153,11 +152,7 @@ import { CommonModule } from "@angular/common";
                   routerLink="/donate"
                   class="flex items-center justify-center w-full px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold text-white bg-gradient-to-r from-pink-500 to-pink-400 rounded-lg hover:from-pink-600 hover:to-pink-500 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
-                  <span
-                    class="mr-2"
-                    style="color: white !important; filter: brightness(1.5);"
-                    >💖</span
-                  >
+                  <span class="mr-2">💖</span>
                   Make a Donation
                 </a>
                 <a
@@ -230,9 +225,7 @@ import { CommonModule } from "@angular/common";
                         "
                         class="border-2 rounded-lg p-3 sm:p-4 text-center transition-all duration-200"
                       >
-                        <span
-                          class="text-lg sm:text-xl mb-1 sm:mb-2 block"
-                          style="color: white !important; filter: brightness(1.5);"
+                        <span class="text-lg sm:text-xl mb-1 sm:mb-2 block"
                           >💖</span
                         >
                         <span class="text-xs sm:text-sm font-medium"
@@ -380,11 +373,7 @@ import { CommonModule } from "@angular/common";
                   [disabled]="!isFormValid()"
                   class="w-full flex items-center justify-center px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold text-white bg-gradient-to-r from-pink-500 to-pink-400 rounded-lg hover:from-pink-600 hover:to-pink-500 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
-                  <span
-                    class="mr-2"
-                    style="color: white !important; filter: brightness(1.5);"
-                    >💖</span
-                  >
+                  <span class="mr-2">💖</span>
                   Send Message
                 </button>
               </form>
@@ -444,11 +433,7 @@ import { CommonModule } from "@angular/common";
         <div
           class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-pink-500 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg shadow-pink-200 animate-pink-glow"
         >
-          <span
-            class="text-white text-2xl sm:text-3xl"
-            style="color: white !important; filter: brightness(1.5);"
-            >💖</span
-          >
+          <span class="text-white text-2xl sm:text-3xl">💖</span>
         </div>
         <h3
           class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4"
